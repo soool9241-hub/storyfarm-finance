@@ -1136,8 +1136,14 @@ const chartDefaults = {
 };
 
 async function loadData() {
-  const res = await fetch('/api/data');
-  return res.json();
+  try {
+    const res = await fetch('/api/data');
+    if (res.ok) return res.json();
+  } catch(e) {}
+  // fallback: 정적 JSON (Vercel 등 API 서버 없는 환경)
+  const res2 = await fetch('/data.json');
+  if (res2.ok) return res2.json();
+  throw new Error('데이터를 불러올 수 없습니다');
 }
 
 function renderSummary(data) {
@@ -1940,8 +1946,16 @@ const STATUS_COLORS = {
 let agentPolling = null;
 
 async function loadAgents() {
-  const res = await fetch('/api/agents');
-  return res.json();
+  try {
+    const res = await fetch('/api/agents');
+    if (res.ok) return res.json();
+  } catch(e) {}
+  // fallback: 정적 JSON
+  try {
+    const res2 = await fetch('/agents.json');
+    if (res2.ok) return res2.json();
+  } catch(e) {}
+  return {};
 }
 
 function renderAgents(agents) {
