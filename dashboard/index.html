@@ -154,6 +154,68 @@
   .chart-wrap { position: relative; height: 280px; }
   .chart-wrap-sm { position: relative; height: 220px; }
 
+  /* ── Chart Card Header (with action button) ── */
+  .chart-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .chart-card-header h3 { margin: 0; padding: 0; border: none; font-size: 15px; font-weight: 600; }
+
+  /* ── Breakdown List (매출/비용 카테고리) ── */
+  .breakdown-list { margin-top: 12px; }
+  .bd-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    background: var(--bg);
+    border-radius: 8px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    transition: background 0.15s;
+  }
+  .bd-item:hover { background: var(--card-hover); }
+  .bd-item .bd-info { display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0; }
+  .bd-item .bd-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .bd-item .bd-name {
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .bd-item .bd-amount {
+    font-variant-numeric: tabular-nums;
+    color: var(--text-dim);
+    margin: 0 12px;
+    flex-shrink: 0;
+  }
+  .bd-item .bd-actions {
+    display: flex;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+  .bd-item .bd-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 11px;
+    cursor: pointer;
+    font-family: 'Pretendard', sans-serif;
+    transition: all 0.15s;
+  }
+  .bd-item .bd-btn:hover { border-color: var(--green); color: var(--green-light); }
+  .bd-item .bd-btn.del:hover { border-color: var(--red); color: var(--red); }
+
   /* ── Full-width card ── */
   .full-card {
     grid-column: 1 / -1;
@@ -835,6 +897,27 @@
     .edit-form label { text-align: left; font-size: 12px; }
     .edit-form input, .edit-form select { padding: 10px 12px; font-size: 14px; min-height: 44px; }
 
+    /* 매출/비용 구성 */
+    .chart-card-header { margin-bottom: 10px; padding-bottom: 8px; }
+    .chart-card-header h3 { font-size: 13px; }
+    .bd-item { padding: 6px 6px; font-size: 11px; flex-wrap: wrap; gap: 4px; }
+    .bd-item .bd-info { min-width: 0; }
+    .bd-item .bd-name { font-size: 12px; }
+    .bd-item .bd-amount { margin: 0 4px; font-size: 11px; }
+    .bd-item .bd-btn { padding: 5px 10px; font-size: 10px; min-height: 30px; }
+    .bd-item .bd-actions { gap: 3px; }
+
+    /* 손익계산서 */
+    .stmt-row { font-size: 12px; padding: 6px 0; gap: 8px; }
+    .stmt-row span:last-child { flex-shrink: 0; text-align: right; }
+    .stmt-row.total-row { font-size: 14px; }
+    .stmt-row .indent { padding-left: 10px; font-size: 11px; }
+
+    /* 자산 감가상각 */
+    .prog-wrap { margin-bottom: 12px; }
+    .prog-label { font-size: 11px; flex-wrap: wrap; gap: 2px; }
+    .prog-label span:last-child { font-size: 10px; }
+
     /* 데이터 입력/내보내기 */
     .tab-btns { gap: 2px; }
     .tab-btn { padding: 8px 8px; font-size: 12px; }
@@ -881,6 +964,22 @@
     /* 탭 글자 줄임 */
     .crud-tab { font-size: 10px; padding: 7px 4px; }
     .tab-btn { font-size: 11px; padding: 7px 4px; }
+
+    /* 매출/비용 - 버튼 아래 배치 */
+    .bd-item { flex-direction: column; align-items: flex-start; gap: 6px; padding: 8px; }
+    .bd-item .bd-info { width: 100%; }
+    .bd-item .bd-amount { margin: 0; font-size: 13px; font-weight: 600; color: var(--text); }
+    .bd-item .bd-actions { width: 100%; justify-content: flex-end; }
+    .bd-item .bd-btn { min-height: 32px; padding: 6px 12px; }
+
+    /* 손익계산서 초소형 */
+    .stmt-row { font-size: 11px; }
+    .stmt-row.total-row { font-size: 13px; }
+    .stmt-row .indent { padding-left: 8px; font-size: 10px; }
+
+    /* 자산 감가상각 초소형 */
+    .prog-label { flex-direction: column; gap: 1px; }
+    .prog-label span:last-child { font-size: 9px; }
 
     /* 모달 풀스크린 */
     .modal-overlay { padding: 0; }
@@ -1155,15 +1254,45 @@
   <!-- Row 1: Revenue & Expense Pie + Income Statement -->
   <div class="chart-grid">
     <div class="chart-card">
-      <h3>매출 구성</h3>
+      <div class="chart-card-header">
+        <h3>매출 구성</h3>
+        <button class="btn btn-green btn-sm" onclick="openBreakdownAdd('revenue')">+ 추가</button>
+      </div>
       <div class="chart-wrap-sm">
         <canvas id="revenueChart"></canvas>
       </div>
+      <div class="breakdown-list" id="revenueList"></div>
     </div>
     <div class="chart-card">
-      <h3>비용 구성</h3>
+      <div class="chart-card-header">
+        <h3>비용 구성</h3>
+        <button class="btn btn-green btn-sm" onclick="openBreakdownAdd('expense')">+ 추가</button>
+      </div>
       <div class="chart-wrap-sm">
         <canvas id="expenseChart"></canvas>
+      </div>
+      <div class="breakdown-list" id="expenseList"></div>
+    </div>
+  </div>
+
+  <!-- Breakdown Edit Modal -->
+  <div class="modal-overlay" id="breakdownModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="breakdownModalTitle">항목 편집</h3>
+        <button class="modal-close" onclick="closeBreakdownModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="edit-form" id="breakdownForm">
+          <label>카테고리명</label>
+          <input type="text" id="bd-name" placeholder="예: 숙박매출, 인건비 등">
+          <label>금액 (원)</label>
+          <input type="number" id="bd-amount" placeholder="0">
+        </div>
+        <div style="margin-top:16px;display:flex;gap:8px;justify-content:flex-end">
+          <button class="btn btn-outline" onclick="closeBreakdownModal()">취소</button>
+          <button class="btn btn-green" onclick="saveBreakdown()">저장</button>
+        </div>
       </div>
     </div>
   </div>
@@ -1301,18 +1430,28 @@ function renderSummary(data) {
   `).join('');
 }
 
+// ── 매출/비용 카테고리 색상 ──
+const REV_COLORS = [COLORS.green, COLORS.teal, COLORS.blue, COLORS.yellow, COLORS.purple];
+const EXP_COLORS = [COLORS.red, COLORS.orange, COLORS.yellow, COLORS.purple, COLORS.pink, COLORS.blue];
+
+let _dashData = null; // 대시보드 데이터 참조
+let revenueChartInstance = null;
+let expenseChartInstance = null;
+
 function renderRevenueChart(data) {
+  _dashData = data;
   const labels = Object.keys(data.revenue_breakdown);
   const values = Object.values(data.revenue_breakdown);
-  if (!labels.length) return;
+  if (!labels.length) { document.getElementById('revenueList').innerHTML = '<p style="color:var(--text-dim);font-size:12px">매출 데이터 없음</p>'; return; }
 
-  new Chart(document.getElementById('revenueChart'), {
+  if (revenueChartInstance) revenueChartInstance.destroy();
+  revenueChartInstance = new Chart(document.getElementById('revenueChart'), {
     type: 'doughnut',
     data: {
       labels,
       datasets: [{
         data: values,
-        backgroundColor: [COLORS.green, COLORS.teal, COLORS.blue, COLORS.yellow],
+        backgroundColor: REV_COLORS,
         borderWidth: 0,
         hoverOffset: 8,
       }],
@@ -1329,20 +1468,23 @@ function renderRevenueChart(data) {
       },
     },
   });
+  renderBreakdownList('revenue', data.revenue_breakdown, REV_COLORS);
 }
 
 function renderExpenseChart(data) {
+  _dashData = data;
   const labels = Object.keys(data.expense_breakdown);
   const values = Object.values(data.expense_breakdown);
-  if (!labels.length) return;
+  if (!labels.length) { document.getElementById('expenseList').innerHTML = '<p style="color:var(--text-dim);font-size:12px">비용 데이터 없음</p>'; return; }
 
-  new Chart(document.getElementById('expenseChart'), {
+  if (expenseChartInstance) expenseChartInstance.destroy();
+  expenseChartInstance = new Chart(document.getElementById('expenseChart'), {
     type: 'doughnut',
     data: {
       labels,
       datasets: [{
         data: values,
-        backgroundColor: [COLORS.red, COLORS.orange, COLORS.yellow, COLORS.purple, COLORS.pink, COLORS.blue],
+        backgroundColor: EXP_COLORS,
         borderWidth: 0,
         hoverOffset: 8,
       }],
@@ -1359,6 +1501,123 @@ function renderExpenseChart(data) {
       },
     },
   });
+  renderBreakdownList('expense', data.expense_breakdown, EXP_COLORS);
+}
+
+// ── Breakdown 카테고리 리스트 렌더링 ──
+function renderBreakdownList(type, breakdown, colors) {
+  const container = document.getElementById(type === 'revenue' ? 'revenueList' : 'expenseList');
+  const entries = Object.entries(breakdown);
+  container.innerHTML = entries.map(([name, amount], i) => `
+    <div class="bd-item">
+      <div class="bd-info">
+        <div class="bd-dot" style="background:${colors[i % colors.length]}"></div>
+        <span class="bd-name">${name}</span>
+      </div>
+      <span class="bd-amount">${KRW(amount)}</span>
+      <div class="bd-actions">
+        <button class="bd-btn" onclick="openBreakdownEdit('${type}','${name}',${amount})">수정</button>
+        <button class="bd-btn del" onclick="deleteBreakdown('${type}','${name}')">삭제</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ── Breakdown 모달 ──
+let _bdMode = 'add'; // 'add' | 'edit'
+let _bdType = 'revenue';
+let _bdOrigName = '';
+
+function openBreakdownAdd(type) {
+  _bdMode = 'add';
+  _bdType = type;
+  _bdOrigName = '';
+  document.getElementById('breakdownModalTitle').textContent = (type === 'revenue' ? '매출' : '비용') + ' 카테고리 추가';
+  document.getElementById('bd-name').value = '';
+  document.getElementById('bd-amount').value = '';
+  document.getElementById('breakdownModal').classList.add('show');
+}
+
+function openBreakdownEdit(type, name, amount) {
+  _bdMode = 'edit';
+  _bdType = type;
+  _bdOrigName = name;
+  document.getElementById('breakdownModalTitle').textContent = (type === 'revenue' ? '매출' : '비용') + ' 카테고리 수정';
+  document.getElementById('bd-name').value = name;
+  document.getElementById('bd-amount').value = amount;
+  document.getElementById('breakdownModal').classList.add('show');
+}
+
+function closeBreakdownModal() {
+  document.getElementById('breakdownModal').classList.remove('show');
+}
+
+async function saveBreakdown() {
+  const name = document.getElementById('bd-name').value.trim();
+  const amount = parseInt(document.getElementById('bd-amount').value) || 0;
+  if (!name) { alert('카테고리명을 입력하세요'); return; }
+  if (amount <= 0) { alert('금액을 입력하세요'); return; }
+
+  const key = _bdType === 'revenue' ? 'revenue_breakdown' : 'expense_breakdown';
+  const bd = _dashData[key];
+
+  // 수정 시 기존 키 삭제
+  if (_bdMode === 'edit' && _bdOrigName && _bdOrigName !== name) {
+    delete bd[_bdOrigName];
+  }
+  bd[name] = amount;
+
+  // API로 저장 시도 (로컬 서버)
+  try {
+    await fetch('/api/breakdown/save', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type: _bdType, breakdown: bd })
+    });
+  } catch(e) {} // 정적 환경에서는 무시
+
+  // 차트 + 리스트 재렌더링
+  if (_bdType === 'revenue') {
+    renderRevenueChart(_dashData);
+  } else {
+    renderExpenseChart(_dashData);
+  }
+  updateSummaryFromBreakdown();
+  closeBreakdownModal();
+}
+
+async function deleteBreakdown(type, name) {
+  if (!confirm(`"${name}" 카테고리를 삭제하시겠습니까?`)) return;
+
+  const key = type === 'revenue' ? 'revenue_breakdown' : 'expense_breakdown';
+  delete _dashData[key][name];
+
+  try {
+    await fetch('/api/breakdown/save', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type, breakdown: _dashData[key] })
+    });
+  } catch(e) {}
+
+  if (type === 'revenue') {
+    renderRevenueChart(_dashData);
+  } else {
+    renderExpenseChart(_dashData);
+  }
+  updateSummaryFromBreakdown();
+}
+
+function updateSummaryFromBreakdown() {
+  // 요약 카드 갱신
+  const revTotal = Object.values(_dashData.revenue_breakdown).reduce((a, b) => a + b, 0);
+  const expTotal = Object.values(_dashData.expense_breakdown).reduce((a, b) => a + b, 0);
+  _dashData.summary.total_revenue = revTotal;
+  _dashData.summary.gross_profit = revTotal - _dashData.summary.total_cogs;
+  _dashData.summary.operating_income = _dashData.summary.gross_profit - expTotal + _dashData.summary.total_cogs;
+  _dashData.summary.total_sga = expTotal - _dashData.summary.total_cogs;
+  renderSummary(_dashData);
+  renderIncomeStatement(_dashData);
 }
 
 function renderIncomeStatement(data) {
@@ -2209,6 +2468,9 @@ function closeModal() {
 // 모달 바깥 클릭 시 닫기
 document.getElementById('agentModal').addEventListener('click', (e) => {
   if (e.target === e.currentTarget) closeModal();
+});
+document.getElementById('breakdownModal').addEventListener('click', (e) => {
+  if (e.target === e.currentTarget) closeBreakdownModal();
 });
 
 async function reloadDashboard() {
