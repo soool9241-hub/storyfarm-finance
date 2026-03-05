@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-03-06 02:18:11",
+  "month": "2026-03",
+  "summary": {
+    "total_revenue": 4650000,
+    "operating_income": -3525000,
+    "operating_margin_pct": -75.8,
+    "current_balance": -2730000,
+    "projected_balance": -5023000,
+    "days_left": 24,
+    "top_alert": "특이사항 없음"
+  },
+  "alerts": {
+    "red_count": 0,
+    "yellow_count": 0,
+    "green_count": 2,
+    "details": {
+      "red": [],
+      "yellow": [],
+      "green": [
+        "",
+        ""
+      ]
+    }
+  }
+}

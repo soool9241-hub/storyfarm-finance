@@ -1,0 +1,379 @@
+{
+  "generated_at": "2026-03-06",
+  "strategy": "avalanche (highest rate first)",
+  "scenarios": {
+    "A_minimum_only": {
+      "description": "최소 납부만 유지",
+      "extra_payment": 0,
+      "total_months": 14,
+      "payoff_date_est": "2027-05",
+      "total_interest_paid": 806327,
+      "total_principal_paid": 18000000,
+      "payoff_events": [
+        {
+          "id": "DEBT-002",
+          "name": "OK캐피탈",
+          "payoff_month": 7,
+          "payoff_date_est": "2026-10"
+        },
+        {
+          "id": "DEBT-003",
+          "name": "국민은행 일시상환",
+          "payoff_month": 7,
+          "payoff_date_est": "2026-10"
+        },
+        {
+          "id": "DEBT-001",
+          "name": "카드론",
+          "payoff_month": 14,
+          "payoff_date_est": "2027-05"
+        }
+      ],
+      "monthly_interest_trend": [
+        {
+          "month": 1,
+          "interest": 136250
+        },
+        {
+          "month": 2,
+          "interest": 124979
+        },
+        {
+          "month": 3,
+          "interest": 113576
+        },
+        {
+          "month": 4,
+          "interest": 102037
+        },
+        {
+          "month": 5,
+          "interest": 90362
+        },
+        {
+          "month": 6,
+          "interest": 78549
+        },
+        {
+          "month": 7,
+          "interest": 66596
+        },
+        {
+          "month": 8,
+          "interest": 24711
+        },
+        {
+          "month": 9,
+          "interest": 21050
+        },
+        {
+          "month": 10,
+          "interest": 17329
+        },
+        {
+          "month": 11,
+          "interest": 13548
+        },
+        {
+          "month": 12,
+          "interest": 9706
+        },
+        {
+          "month": 13,
+          "interest": 5801
+        },
+        {
+          "month": 14,
+          "interest": 1833
+        }
+      ],
+      "monthly_log_summary": [
+        {
+          "month": 1,
+          "interest": 136250,
+          "principal": 1001250,
+          "remaining_total": 16998750
+        },
+        {
+          "month": 2,
+          "interest": 124979,
+          "principal": 1012521,
+          "remaining_total": 15986229
+        },
+        {
+          "month": 3,
+          "interest": 113576,
+          "principal": 1023924,
+          "remaining_total": 14962305
+        },
+        {
+          "month": 4,
+          "interest": 102037,
+          "principal": 1035463,
+          "remaining_total": 13926842
+        },
+        {
+          "month": 5,
+          "interest": 90362,
+          "principal": 1047138,
+          "remaining_total": 12879704
+        },
+        {
+          "month": 6,
+          "interest": 78549,
+          "principal": 1058951,
+          "remaining_total": 11820753
+        },
+        {
+          "month": 12,
+          "interest": 9706,
+          "principal": 240294,
+          "remaining_total": 357024
+        },
+        {
+          "month": 13,
+          "interest": 5801,
+          "principal": 244199,
+          "remaining_total": 112825
+        },
+        {
+          "month": 14,
+          "interest": 1833,
+          "principal": 112825,
+          "remaining_total": 0
+        }
+      ]
+    },
+    "B_extra_500k": {
+      "description": "월 50만원 추가 상환 (최고금리 우선)",
+      "extra_payment": 500000,
+      "interest_saved_vs_A": 242513,
+      "total_months": 7,
+      "payoff_date_est": "2026-10",
+      "total_interest_paid": 563814,
+      "total_principal_paid": 18000000,
+      "payoff_events": [
+        {
+          "id": "DEBT-001",
+          "name": "카드론",
+          "payoff_month": 5,
+          "payoff_date_est": "2026-08"
+        },
+        {
+          "id": "DEBT-002",
+          "name": "OK캐피탈",
+          "payoff_month": 6,
+          "payoff_date_est": "2026-09"
+        },
+        {
+          "id": "DEBT-003",
+          "name": "국민은행 일시상환",
+          "payoff_month": 7,
+          "payoff_date_est": "2026-10"
+        }
+      ],
+      "monthly_interest_trend": [
+        {
+          "month": 1,
+          "interest": 136250
+        },
+        {
+          "month": 2,
+          "interest": 116854
+        },
+        {
+          "month": 3,
+          "interest": 97194
+        },
+        {
+          "month": 4,
+          "interest": 77264
+        },
+        {
+          "month": 5,
+          "interest": 57061
+        },
+        {
+          "month": 6,
+          "interest": 41691
+        },
+        {
+          "month": 7,
+          "interest": 37500
+        }
+      ],
+      "monthly_log_summary": [
+        {
+          "month": 1,
+          "interest": 136250,
+          "principal": 1501250,
+          "remaining_total": 16498750
+        },
+        {
+          "month": 2,
+          "interest": 116854,
+          "principal": 1520646,
+          "remaining_total": 14978104
+        },
+        {
+          "month": 3,
+          "interest": 97194,
+          "principal": 1540306,
+          "remaining_total": 13437798
+        },
+        {
+          "month": 4,
+          "interest": 77264,
+          "principal": 1560236,
+          "remaining_total": 11877562
+        },
+        {
+          "month": 5,
+          "interest": 57061,
+          "principal": 1458367,
+          "remaining_total": 10419195
+        },
+        {
+          "month": 6,
+          "interest": 41691,
+          "principal": 419195,
+          "remaining_total": 10000000
+        },
+        {
+          "month": 5,
+          "interest": 57061,
+          "principal": 1458367,
+          "remaining_total": 10419195
+        },
+        {
+          "month": 6,
+          "interest": 41691,
+          "principal": 419195,
+          "remaining_total": 10000000
+        },
+        {
+          "month": 7,
+          "interest": 37500,
+          "principal": 10000000,
+          "remaining_total": 0
+        }
+      ]
+    },
+    "C_extra_1M": {
+      "description": "월 100만원 추가 상환 (최고금리 우선)",
+      "extra_payment": 1000000,
+      "interest_saved_vs_A": 310580,
+      "total_months": 7,
+      "payoff_date_est": "2026-10",
+      "total_interest_paid": 495747,
+      "total_principal_paid": 18000000,
+      "payoff_events": [
+        {
+          "id": "DEBT-001",
+          "name": "카드론",
+          "payoff_month": 3,
+          "payoff_date_est": "2026-06"
+        },
+        {
+          "id": "DEBT-002",
+          "name": "OK캐피탈",
+          "payoff_month": 5,
+          "payoff_date_est": "2026-08"
+        },
+        {
+          "id": "DEBT-003",
+          "name": "국민은행 일시상환",
+          "payoff_month": 7,
+          "payoff_date_est": "2026-10"
+        }
+      ],
+      "monthly_interest_trend": [
+        {
+          "month": 1,
+          "interest": 136250
+        },
+        {
+          "month": 2,
+          "interest": 108729
+        },
+        {
+          "month": 3,
+          "interest": 80812
+        },
+        {
+          "month": 4,
+          "interest": 56632
+        },
+        {
+          "month": 5,
+          "interest": 38324
+        },
+        {
+          "month": 6,
+          "interest": 37500
+        },
+        {
+          "month": 7,
+          "interest": 37500
+        }
+      ],
+      "monthly_log_summary": [
+        {
+          "month": 1,
+          "interest": 136250,
+          "principal": 2001250,
+          "remaining_total": 15998750
+        },
+        {
+          "month": 2,
+          "interest": 108729,
+          "principal": 2028771,
+          "remaining_total": 13969979
+        },
+        {
+          "month": 3,
+          "interest": 80812,
+          "principal": 2056688,
+          "remaining_total": 11913291
+        },
+        {
+          "month": 4,
+          "interest": 56632,
+          "principal": 1830868,
+          "remaining_total": 10082423
+        },
+        {
+          "month": 5,
+          "interest": 38324,
+          "principal": 82423,
+          "remaining_total": 10000000
+        },
+        {
+          "month": 6,
+          "interest": 37500,
+          "principal": 0,
+          "remaining_total": 10000000
+        },
+        {
+          "month": 5,
+          "interest": 38324,
+          "principal": 82423,
+          "remaining_total": 10000000
+        },
+        {
+          "month": 6,
+          "interest": 37500,
+          "principal": 0,
+          "remaining_total": 10000000
+        },
+        {
+          "month": 7,
+          "interest": 37500,
+          "principal": 10000000,
+          "remaining_total": 0
+        }
+      ]
+    }
+  },
+  "recommendation": "현재 최소납부 유지 시 총 이자: 806,327원, 완납 예상: 2027-05 | 월 50만원 추가 시 이자 242,513원 절감, 완납: 2026-10 | 월 100만원 추가 시 이자 310,580원 절감, 완납: 2026-10"
+}

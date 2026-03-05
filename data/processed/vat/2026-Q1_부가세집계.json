@@ -1,0 +1,186 @@
+{
+  "quarter": "2026-Q1",
+  "generated_at": "2026-03-06",
+  "summary": {
+    "sales_tax": 0,
+    "sales_tax_label": "매출세액",
+    "purchase_tax": 0,
+    "purchase_tax_label": "매입세액",
+    "non_deductible_tax": 0,
+    "non_deductible_label": "불공제 매입세액",
+    "net_vat": 0,
+    "net_vat_label": "납부(환급)세액",
+    "vat_direction": "납부"
+  },
+  "sales_count": 7,
+  "purchase_count": 8,
+  "non_deductible_count": 0,
+  "sales_details": [
+    {
+      "date": "2026-03-05",
+      "description": "",
+      "amount": 2200000,
+      "tax_amount": 0,
+      "category": "기타"
+    },
+    {
+      "date": "2026-03-12",
+      "description": "",
+      "amount": 1650000,
+      "tax_amount": 0,
+      "category": "기타"
+    },
+    {
+      "date": "2026-03-07",
+      "description": "",
+      "amount": 150000,
+      "tax_amount": 0,
+      "category": "숙박매출"
+    },
+    {
+      "date": "2026-03-14",
+      "description": "",
+      "amount": 120000,
+      "tax_amount": 0,
+      "category": "숙박매출"
+    },
+    {
+      "date": "2026-03-21",
+      "description": "",
+      "amount": 200000,
+      "tax_amount": 0,
+      "category": "숙박매출"
+    },
+    {
+      "date": "2026-03-22",
+      "description": "",
+      "amount": 150000,
+      "tax_amount": 0,
+      "category": "숙박매출"
+    },
+    {
+      "date": "2026-03-28",
+      "description": "",
+      "amount": 180000,
+      "tax_amount": 0,
+      "category": "숙박매출"
+    }
+  ],
+  "purchase_details": [
+    {
+      "date": "2026-03-01",
+      "description": "",
+      "amount": 800000,
+      "tax_amount": 0,
+      "category": "임대료"
+    },
+    {
+      "date": "2026-03-03",
+      "description": "",
+      "amount": 880000,
+      "tax_amount": 0,
+      "category": "재료비"
+    },
+    {
+      "date": "2026-03-08",
+      "description": "",
+      "amount": 550000,
+      "tax_amount": 0,
+      "category": "재료비"
+    },
+    {
+      "date": "2026-03-10",
+      "description": "",
+      "amount": 300000,
+      "tax_amount": 0,
+      "category": "기타"
+    },
+    {
+      "date": "2026-03-15",
+      "description": "",
+      "amount": 1200000,
+      "tax_amount": 0,
+      "category": "기타"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "",
+      "amount": 800000,
+      "tax_amount": 0,
+      "category": "기타"
+    },
+    {
+      "date": "2026-03-20",
+      "description": "",
+      "amount": 850000,
+      "tax_amount": 0,
+      "category": "기타"
+    },
+    {
+      "date": "2026-03-25",
+      "description": "",
+      "amount": 2000000,
+      "tax_amount": 0,
+      "category": "인건비"
+    }
+  ],
+  "non_deductible_details": [],
+  "missing_invoice_alerts": [
+    {
+      "date": "2026-03-05",
+      "description": "",
+      "amount": 2200000,
+      "tax_amount": 0,
+      "category": "기타",
+      "alert": "매출 세금계산서 미발행 의심"
+    },
+    {
+      "date": "2026-03-12",
+      "description": "",
+      "amount": 1650000,
+      "tax_amount": 0,
+      "category": "기타",
+      "alert": "매출 세금계산서 미발행 의심"
+    },
+    {
+      "date": "2026-03-07",
+      "description": "",
+      "amount": 150000,
+      "tax_amount": 0,
+      "category": "숙박매출",
+      "alert": "매출 세금계산서 미발행 의심"
+    },
+    {
+      "date": "2026-03-14",
+      "description": "",
+      "amount": 120000,
+      "tax_amount": 0,
+      "category": "숙박매출",
+      "alert": "매출 세금계산서 미발행 의심"
+    },
+    {
+      "date": "2026-03-21",
+      "description": "",
+      "amount": 200000,
+      "tax_amount": 0,
+      "category": "숙박매출",
+      "alert": "매출 세금계산서 미발행 의심"
+    },
+    {
+      "date": "2026-03-22",
+      "description": "",
+      "amount": 150000,
+      "tax_amount": 0,
+      "category": "숙박매출",
+      "alert": "매출 세금계산서 미발행 의심"
+    },
+    {
+      "date": "2026-03-28",
+      "description": "",
+      "amount": 180000,
+      "tax_amount": 0,
+      "category": "숙박매출",
+      "alert": "매출 세금계산서 미발행 의심"
+    }
+  ]
+}

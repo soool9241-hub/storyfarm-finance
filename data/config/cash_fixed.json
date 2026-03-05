@@ -1,0 +1,12 @@
+{
+  "monthly_rent": { "amount": 800000, "day": 1 },
+  "loan_payments": [
+    { "name": "국민은행 일시상환", "due_date": "2026-10-31", "amount": 10000000, "monthly_interest": 37500 },
+    { "name": "카드론", "monthly": 250000, "day": 25 },
+    { "name": "OK캐피탈", "monthly": 850000, "day": 20 }
+  ],
+  "salary_day": 25,
+  "salary_amount": 2000000,
+  "card_payment_days": { "국민카드": 15, "신한카드": 17 },
+  "utilities": { "amount": 300000, "day": 10 }
+}

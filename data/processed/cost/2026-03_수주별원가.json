@@ -1,0 +1,175 @@
+{
+  "month": "2026-03",
+  "generated_at": "2026-03-06T02:18:10.981003",
+  "settings_used": {
+    "hourly_machine_cost": {
+      "cnc": 15000,
+      "laser": 8000
+    },
+    "hourly_labor_cost": 15000,
+    "indirect_cost_rate": 0.08,
+    "min_margin_alert": 0.15,
+    "critical_margin_alert": 0.05
+  },
+  "orders": [
+    {
+      "order_id": "CNC-2026-031",
+      "date": "2026-03-03",
+      "description": "AL6061 정밀 가공 부품 50EA",
+      "revenue": 2500000,
+      "cost_breakdown": {
+        "material_cost": 562500,
+        "machine_cost": 240000,
+        "labor_cost": 300000,
+        "outsource_cost": 0,
+        "indirect_cost": 200000
+      },
+      "total_cost": 1302500,
+      "profit": 1197500,
+      "margin_rate": 0.479,
+      "machine_type": "cnc",
+      "material_type": "AL6061",
+      "business_type": "workshop"
+    },
+    {
+      "order_id": "CNC-2026-032",
+      "date": "2026-03-07",
+      "description": "SUS304 브라켓 제작 30EA",
+      "revenue": 1800000,
+      "cost_breakdown": {
+        "material_cost": 520000,
+        "machine_cost": 180000,
+        "labor_cost": 210000,
+        "outsource_cost": 100000,
+        "indirect_cost": 144000
+      },
+      "total_cost": 1154000,
+      "profit": 646000,
+      "margin_rate": 0.3589,
+      "machine_type": "cnc",
+      "material_type": "SUS304",
+      "business_type": "workshop"
+    },
+    {
+      "order_id": "CNC-2026-033",
+      "date": "2026-03-12",
+      "description": "MDF 레이저커팅 간판 10EA",
+      "revenue": 500000,
+      "cost_breakdown": {
+        "material_cost": 75000,
+        "machine_cost": 32000,
+        "labor_cost": 45000,
+        "outsource_cost": 0,
+        "indirect_cost": 40000
+      },
+      "total_cost": 192000,
+      "profit": 308000,
+      "margin_rate": 0.616,
+      "machine_type": "laser",
+      "material_type": "MDF",
+      "business_type": "workshop"
+    },
+    {
+      "order_id": "CNC-2026-034",
+      "date": "2026-03-18",
+      "description": "AL6061 시제품 가공 5EA - 급행",
+      "revenue": 350000,
+      "cost_breakdown": {
+        "material_cost": 135000,
+        "machine_cost": 120000,
+        "labor_cost": 150000,
+        "outsource_cost": 50000,
+        "indirect_cost": 28000
+      },
+      "total_cost": 483000,
+      "profit": -133000,
+      "margin_rate": -0.38,
+      "machine_type": "cnc",
+      "material_type": "AL6061",
+      "business_type": "workshop"
+    },
+    {
+      "order_id": "CNC-2026-035",
+      "date": "2026-03-22",
+      "description": "SUS304 정밀부품 외주포함 100EA",
+      "revenue": 5000000,
+      "cost_breakdown": {
+        "material_cost": 1625000,
+        "machine_cost": 600000,
+        "labor_cost": 525000,
+        "outsource_cost": 300000,
+        "indirect_cost": 400000
+      },
+      "total_cost": 3450000,
+      "profit": 1550000,
+      "margin_rate": 0.31,
+      "machine_type": "cnc",
+      "material_type": "SUS304",
+      "business_type": "workshop"
+    }
+  ],
+  "equipment_contribution": {
+    "cnc": {
+      "total_revenue": 9650000,
+      "revenue_share": 0.9507,
+      "order_count": 4,
+      "total_machine_cost": 1140000,
+      "monthly_available_hours": 176
+    },
+    "laser": {
+      "total_revenue": 500000,
+      "revenue_share": 0.0493,
+      "order_count": 1,
+      "total_machine_cost": 32000,
+      "monthly_available_hours": 176
+    }
+  },
+  "material_tracking": {
+    "AL6061": {
+      "records": [
+        {
+          "date": "2026-03-03",
+          "order_id": "CNC-2026-031",
+          "material_cost": 562500
+        },
+        {
+          "date": "2026-03-18",
+          "order_id": "CNC-2026-034",
+          "material_cost": 135000
+        }
+      ],
+      "count": 2,
+      "total_cost": 697500,
+      "avg_cost": 348750
+    },
+    "SUS304": {
+      "records": [
+        {
+          "date": "2026-03-07",
+          "order_id": "CNC-2026-032",
+          "material_cost": 520000
+        },
+        {
+          "date": "2026-03-22",
+          "order_id": "CNC-2026-035",
+          "material_cost": 1625000
+        }
+      ],
+      "count": 2,
+      "total_cost": 2145000,
+      "avg_cost": 1072500
+    },
+    "MDF": {
+      "records": [
+        {
+          "date": "2026-03-12",
+          "order_id": "CNC-2026-033",
+          "material_cost": 75000
+        }
+      ],
+      "count": 1,
+      "total_cost": 75000,
+      "avg_cost": 75000
+    }
+  }
+}

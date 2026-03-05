@@ -1,0 +1,90 @@
+{
+  "period": "2026-Q1",
+  "month": "2026-03",
+  "sales": {
+    "total": 4650000,
+    "tax": 0,
+    "count": 7
+  },
+  "purchases": {
+    "total": 7380000,
+    "tax": 0,
+    "count": 8
+  },
+  "net_vat": 0,
+  "vat_payable": 0,
+  "vat_refundable": 0,
+  "missing_invoices": [
+    {
+      "id": "TXN-20260301-001",
+      "date": "2026-03-01",
+      "counterparty": "임대료",
+      "amount": 800000,
+      "reason": "세금계산서 미수취 매입"
+    },
+    {
+      "id": "TXN-20260303-001",
+      "date": "2026-03-03",
+      "counterparty": "재료매입",
+      "amount": 880000,
+      "reason": "세금계산서 미수취 매입"
+    },
+    {
+      "id": "TXN-20260305-001",
+      "date": "2026-03-05",
+      "counterparty": "제품대금입금",
+      "amount": 2200000,
+      "reason": "세금계산서 미발행 매출"
+    },
+    {
+      "id": "TXN-20260308-001",
+      "date": "2026-03-08",
+      "counterparty": "재료매입",
+      "amount": 550000,
+      "reason": "세금계산서 미수취 매입"
+    },
+    {
+      "id": "TXN-20260310-001",
+      "date": "2026-03-10",
+      "counterparty": "공과금",
+      "amount": 300000,
+      "reason": "세금계산서 미수취 매입"
+    },
+    {
+      "id": "TXN-20260312-001",
+      "date": "2026-03-12",
+      "counterparty": "제품대금입금",
+      "amount": 1650000,
+      "reason": "세금계산서 미발행 매출"
+    },
+    {
+      "id": "TXN-20260315-001",
+      "date": "2026-03-15",
+      "counterparty": "국민카드결제",
+      "amount": 1200000,
+      "reason": "세금계산서 미수취 매입"
+    },
+    {
+      "id": "TXN-20260317-001",
+      "date": "2026-03-17",
+      "counterparty": "신한카드결제",
+      "amount": 800000,
+      "reason": "세금계산서 미수취 매입"
+    },
+    {
+      "id": "TXN-20260320-001",
+      "date": "2026-03-20",
+      "counterparty": "OK캐피탈",
+      "amount": 850000,
+      "reason": "세금계산서 미수취 매입"
+    },
+    {
+      "id": "TXN-20260325-001",
+      "date": "2026-03-25",
+      "counterparty": "급여",
+      "amount": 2000000,
+      "reason": "세금계산서 미수취 매입"
+    }
+  ],
+  "missing_invoice_count": 10
+}

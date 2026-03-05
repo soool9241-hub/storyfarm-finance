@@ -1,0 +1,99 @@
+{
+  "month": "2026-03",
+  "ref_date": "2026-03-31",
+  "generated_at": "2026-03-06 02:18:10",
+  "depreciation": [
+    {
+      "asset_id": "ASSET-001",
+      "asset_name": "CNC 머신 1호",
+      "acquisition_cost": 30000000,
+      "residual_value": 3000000,
+      "depreciable_amount": 27000000,
+      "monthly_depreciation": 450000,
+      "annual_depreciation": 5400000,
+      "elapsed_months": 33,
+      "total_life_months": 60,
+      "remaining_months": 27,
+      "life_elapsed_pct": 55.0,
+      "accumulated_depreciation": 14850000,
+      "book_value": 15150000,
+      "depreciation_complete": false
+    },
+    {
+      "asset_id": "ASSET-002",
+      "asset_name": "레이저커터",
+      "acquisition_cost": 15000000,
+      "residual_value": 1500000,
+      "depreciable_amount": 13500000,
+      "monthly_depreciation": 225000,
+      "annual_depreciation": 2700000,
+      "elapsed_months": 26,
+      "total_life_months": 60,
+      "remaining_months": 34,
+      "life_elapsed_pct": 43.3,
+      "accumulated_depreciation": 5850000,
+      "book_value": 9150000,
+      "depreciation_complete": false
+    },
+    {
+      "asset_id": "ASSET-003",
+      "asset_name": "CNC 라우터",
+      "acquisition_cost": 8000000,
+      "residual_value": 800000,
+      "depreciable_amount": 7200000,
+      "monthly_depreciation": 120000,
+      "annual_depreciation": 1440000,
+      "elapsed_months": 24,
+      "total_life_months": 60,
+      "remaining_months": 36,
+      "life_elapsed_pct": 40.0,
+      "accumulated_depreciation": 2880000,
+      "book_value": 5120000,
+      "depreciation_complete": false
+    }
+  ],
+  "replacement_alerts": [],
+  "maintenance_analysis": [
+    {
+      "asset_id": "ASSET-001",
+      "asset_name": "CNC 머신 1호",
+      "total_entries": 3,
+      "total_cost": 580000,
+      "monthly_summary": {
+        "2025-08": {
+          "count": 1,
+          "cost": 150000
+        },
+        "2025-11": {
+          "count": 1,
+          "cost": 80000
+        },
+        "2026-02": {
+          "count": 1,
+          "cost": 350000
+        }
+      },
+      "frequency_increasing": false
+    },
+    {
+      "asset_id": "ASSET-002",
+      "asset_name": "레이저커터",
+      "total_entries": 1,
+      "total_cost": 200000,
+      "monthly_summary": {
+        "2025-07": {
+          "count": 1,
+          "cost": 200000
+        }
+      },
+      "frequency_increasing": false
+    },
+    {
+      "asset_id": "ASSET-003",
+      "total_entries": 0,
+      "total_cost": 0,
+      "monthly_summary": {},
+      "frequency_increasing": false
+    }
+  ]
+}

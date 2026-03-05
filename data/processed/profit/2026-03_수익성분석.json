@@ -1,0 +1,74 @@
+{
+  "month": "2026-03",
+  "generated_at": "2026-03-06 02:18:11",
+  "business_comparison": {
+    "workshop": {
+      "revenue": 3850000,
+      "cogs": 0,
+      "operating_profit": 3850000,
+      "profit_margin_pct": 100.0
+    },
+    "pension": {
+      "revenue": 800000,
+      "cogs": 0,
+      "operating_profit": 800000,
+      "profit_margin_pct": 100.0
+    },
+    "summary": "공방 마진 100.0%, 펜션 마진 100.0%"
+  },
+  "material_margin": [],
+  "customer_margin": {
+    "top10_by_revenue": [
+      {
+        "customer": "미분류",
+        "revenue": 3850000,
+        "cost": 0,
+        "profit": 3850000,
+        "margin_pct": 100.0
+      }
+    ],
+    "top10_by_margin": [
+      {
+        "customer": "미분류",
+        "revenue": 3850000,
+        "cost": 0,
+        "profit": 3850000,
+        "margin_pct": 100.0
+      }
+    ],
+    "high_revenue_low_margin": []
+  },
+  "pension_analysis": {
+    "revenue_by_weekday": {
+      "토": 650000,
+      "일": 150000
+    },
+    "revenue_by_season": {
+      "봄": 800000
+    },
+    "total_revenue": 800000,
+    "total_guests": 5,
+    "avg_revenue_per_guest": 160000,
+    "total_days": 31,
+    "booked_days": 5,
+    "unbooked_days": 26,
+    "vacancy_rate_pct": 83.9
+  },
+  "growth": {
+    "current_month": "2026-03",
+    "current_revenue": 4650000,
+    "previous_month": "2026-02",
+    "previous_revenue": 0,
+    "mom_pct": null,
+    "alert": false
+  },
+  "breakeven": {
+    "fixed_costs": 5032500,
+    "variable_costs": 0,
+    "variable_cost_ratio": 0.0,
+    "revenue": 4650000,
+    "bep": 5032500,
+    "gap": 382500,
+    "bep_message": "이번달 BEP 달성까지 38만원 남았습니다"
+  }
+}

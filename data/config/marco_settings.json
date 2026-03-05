@@ -1,0 +1,7 @@
+{
+  "hourly_machine_cost": { "cnc": 15000, "laser": 8000 },
+  "hourly_labor_cost": 15000,
+  "indirect_cost_rate": 0.08,
+  "min_margin_alert": 0.15,
+  "critical_margin_alert": 0.05
+}

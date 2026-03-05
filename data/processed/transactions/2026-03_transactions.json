@@ -1,0 +1,312 @@
+[
+  {
+    "date": "2026-03-01",
+    "type": "expense",
+    "business_type": "workshop",
+    "amount": 800000,
+    "tax_amount": 0,
+    "counterparty": "임대료",
+    "category": "임대료",
+    "material": null,
+    "source_file": "2026-03_국민은행_거래내역.csv",
+    "raw_data": {
+      "거래일시": "2026-03-01",
+      "적요": "임대료",
+      "거래처": "부동산중개",
+      "출금액": "800000",
+      "입금액": "0",
+      "잔액": "7700000",
+      "거래유형": "이체"
+    },
+    "id": "TXN-20260301-001"
+  },
+  {
+    "date": "2026-03-03",
+    "type": "expense",
+    "business_type": "workshop",
+    "amount": 880000,
+    "tax_amount": 0,
+    "counterparty": "재료매입",
+    "category": "재료비",
+    "material": null,
+    "source_file": "2026-03_국민은행_거래내역.csv",
+    "raw_data": {
+      "거래일시": "2026-03-03",
+      "적요": "재료매입",
+      "거래처": "한국알루미늄",
+      "출금액": "880000",
+      "입금액": "0",
+      "잔액": "6820000",
+      "거래유형": "이체"
+    },
+    "id": "TXN-20260303-001"
+  },
+  {
+    "date": "2026-03-05",
+    "type": "income",
+    "business_type": "workshop",
+    "amount": 2200000,
+    "tax_amount": 0,
+    "counterparty": "제품대금입금",
+    "category": "기타",
+    "material": null,
+    "source_file": "2026-03_국민은행_거래내역.csv",
+    "raw_data": {
+      "거래일시": "2026-03-05",
+      "적요": "제품대금입금",
+      "거래처": "A기업",
+      "출금액": "0",
+      "입금액": "2200000",
+      "잔액": "9020000",
+      "거래유형": "이체"
+    },
+    "id": "TXN-20260305-001"
+  },
+  {
+    "date": "2026-03-08",
+    "type": "expense",
+    "business_type": "workshop",
+    "amount": 550000,
+    "tax_amount": 0,
+    "counterparty": "재료매입",
+    "category": "재료비",
+    "material": null,
+    "source_file": "2026-03_국민은행_거래내역.csv",
+    "raw_data": {
+      "거래일시": "2026-03-08",
+      "적요": "재료매입",
+      "거래처": "스틸코리아",
+      "출금액": "550000",
+      "입금액": "0",
+      "잔액": "8470000",
+      "거래유형": "이체"
+    },
+    "id": "TXN-20260308-001"
+  },
+  {
+    "date": "2026-03-10",
+    "type": "expense",
+    "business_type": "workshop",
+    "amount": 300000,
+    "tax_amount": 0,
+    "counterparty": "공과금",
+    "category": "기타",
+    "material": null,
+    "source_file": "2026-03_국민은행_거래내역.csv",
+    "raw_data": {
+      "거래일시": "2026-03-10",
+      "적요": "공과금",
+      "거래처": "한국전력",
+      "출금액": "300000",
+      "입금액": "0",
+      "잔액": "8170000",
+      "거래유형": "자동이체"
+    },
+    "id": "TXN-20260310-001"
+  },
+  {
+    "date": "2026-03-12",
+    "type": "income",
+    "business_type": "workshop",
+    "amount": 1650000,
+    "tax_amount": 0,
+    "counterparty": "제품대금입금",
+    "category": "기타",
+    "material": null,
+    "source_file": "2026-03_국민은행_거래내역.csv",
+    "raw_data": {
+      "거래일시": "2026-03-12",
+      "적요": "제품대금입금",
+      "거래처": "B산업",
+      "출금액": "0",
+      "입금액": "1650000",
+      "잔액": "9820000",
+      "거래유형": "이체"
+    },
+    "id": "TXN-20260312-001"
+  },
+  {
+    "date": "2026-03-15",
+    "type": "expense",
+    "business_type": "workshop",
+    "amount": 1200000,
+    "tax_amount": 0,
+    "counterparty": "국민카드결제",
+    "category": "기타",
+    "material": null,
+    "source_file": "2026-03_국민은행_거래내역.csv",
+    "raw_data": {
+      "거래일시": "2026-03-15",
+      "적요": "국민카드결제",
+      "거래처": "국민카드",
+      "출금액": "1200000",
+      "입금액": "0",
+      "잔액": "8620000",
+      "거래유형": "카드"
+    },
+    "id": "TXN-20260315-001"
+  },
+  {
+    "date": "2026-03-17",
+    "type": "expense",
+    "business_type": "workshop",
+    "amount": 800000,
+    "tax_amount": 0,
+    "counterparty": "신한카드결제",
+    "category": "기타",
+    "material": null,
+    "source_file": "2026-03_국민은행_거래내역.csv",
+    "raw_data": {
+      "거래일시": "2026-03-17",
+      "적요": "신한카드결제",
+      "거래처": "신한카드",
+      "출금액": "800000",
+      "입금액": "0",
+      "잔액": "7820000",
+      "거래유형": "카드"
+    },
+    "id": "TXN-20260317-001"
+  },
+  {
+    "date": "2026-03-20",
+    "type": "expense",
+    "business_type": "workshop",
+    "amount": 850000,
+    "tax_amount": 0,
+    "counterparty": "OK캐피탈",
+    "category": "기타",
+    "material": null,
+    "source_file": "2026-03_국민은행_거래내역.csv",
+    "raw_data": {
+      "거래일시": "2026-03-20",
+      "적요": "OK캐피탈",
+      "거래처": "OK저축은행",
+      "출금액": "850000",
+      "입금액": "0",
+      "잔액": "6970000",
+      "거래유형": "이체"
+    },
+    "id": "TXN-20260320-001"
+  },
+  {
+    "date": "2026-03-25",
+    "type": "expense",
+    "business_type": "workshop",
+    "amount": 2000000,
+    "tax_amount": 0,
+    "counterparty": "급여",
+    "category": "인건비",
+    "material": null,
+    "source_file": "2026-03_국민은행_거래내역.csv",
+    "raw_data": {
+      "거래일시": "2026-03-25",
+      "적요": "급여",
+      "거래처": "직원급여",
+      "출금액": "2000000",
+      "입금액": "0",
+      "잔액": "4970000",
+      "거래유형": "이체"
+    },
+    "id": "TXN-20260325-001"
+  },
+  {
+    "date": "2026-03-07",
+    "type": "income",
+    "business_type": "pension",
+    "amount": 150000,
+    "tax_amount": 0,
+    "counterparty": "네이버",
+    "category": "숙박매출",
+    "material": null,
+    "source_file": "2026-03_달팽이아지트_예약.csv",
+    "raw_data": {
+      "예약일": "2026-03-01",
+      "체크인": "2026-03-07",
+      "체크아웃": "2026-03-08",
+      "인원": "4",
+      "금액": "150000",
+      "예약경로": "네이버"
+    },
+    "id": "TXN-20260307-001"
+  },
+  {
+    "date": "2026-03-14",
+    "type": "income",
+    "business_type": "pension",
+    "amount": 120000,
+    "tax_amount": 0,
+    "counterparty": "에어비앤비",
+    "category": "숙박매출",
+    "material": null,
+    "source_file": "2026-03_달팽이아지트_예약.csv",
+    "raw_data": {
+      "예약일": "2026-03-05",
+      "체크인": "2026-03-14",
+      "체크아웃": "2026-03-15",
+      "인원": "2",
+      "금액": "120000",
+      "예약경로": "에어비앤비"
+    },
+    "id": "TXN-20260314-001"
+  },
+  {
+    "date": "2026-03-21",
+    "type": "income",
+    "business_type": "pension",
+    "amount": 200000,
+    "tax_amount": 0,
+    "counterparty": "직접예약",
+    "category": "숙박매출",
+    "material": null,
+    "source_file": "2026-03_달팽이아지트_예약.csv",
+    "raw_data": {
+      "예약일": "2026-03-10",
+      "체크인": "2026-03-21",
+      "체크아웃": "2026-03-22",
+      "인원": "6",
+      "금액": "200000",
+      "예약경로": "직접예약"
+    },
+    "id": "TXN-20260321-001"
+  },
+  {
+    "date": "2026-03-22",
+    "type": "income",
+    "business_type": "pension",
+    "amount": 150000,
+    "tax_amount": 0,
+    "counterparty": "네이버",
+    "category": "숙박매출",
+    "material": null,
+    "source_file": "2026-03_달팽이아지트_예약.csv",
+    "raw_data": {
+      "예약일": "2026-03-12",
+      "체크인": "2026-03-22",
+      "체크아웃": "2026-03-23",
+      "인원": "3",
+      "금액": "150000",
+      "예약경로": "네이버"
+    },
+    "id": "TXN-20260322-001"
+  },
+  {
+    "date": "2026-03-28",
+    "type": "income",
+    "business_type": "pension",
+    "amount": 180000,
+    "tax_amount": 0,
+    "counterparty": "에어비앤비",
+    "category": "숙박매출",
+    "material": null,
+    "source_file": "2026-03_달팽이아지트_예약.csv",
+    "raw_data": {
+      "예약일": "2026-03-15",
+      "체크인": "2026-03-28",
+      "체크아웃": "2026-03-29",
+      "인원": "4",
+      "금액": "180000",
+      "예약경로": "에어비앤비"
+    },
+    "id": "TXN-20260328-001"
+  }
+]

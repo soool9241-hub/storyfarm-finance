@@ -1,0 +1,60 @@
+{
+  "month": "2026-03",
+  "generated_at": "2026-03-06T02:18:10.980988",
+  "order_count": 5,
+  "total_revenue": 10150000,
+  "total_cost": 6581500,
+  "total_profit": 3568500,
+  "avg_margin_rate": 0.3516,
+  "orders": [
+    {
+      "order_id": "CNC-2026-031",
+      "revenue": 2500000,
+      "total_cost": 1302500,
+      "profit": 1197500,
+      "margin_rate": 0.479
+    },
+    {
+      "order_id": "CNC-2026-032",
+      "revenue": 1800000,
+      "total_cost": 1154000,
+      "profit": 646000,
+      "margin_rate": 0.3589
+    },
+    {
+      "order_id": "CNC-2026-033",
+      "revenue": 500000,
+      "total_cost": 192000,
+      "profit": 308000,
+      "margin_rate": 0.616
+    },
+    {
+      "order_id": "CNC-2026-034",
+      "revenue": 350000,
+      "total_cost": 483000,
+      "profit": -133000,
+      "margin_rate": -0.38
+    },
+    {
+      "order_id": "CNC-2026-035",
+      "revenue": 5000000,
+      "total_cost": 3450000,
+      "profit": 1550000,
+      "margin_rate": 0.31
+    }
+  ],
+  "alerts": [
+    {
+      "order_id": "CNC-2026-034",
+      "severity": "CRITICAL",
+      "margin_rate": -0.38,
+      "margin_pct": -38.0,
+      "avg_3month_margin_pct": 0.0,
+      "message": "이 수주(CNC-2026-034)는 마진율 -38.0%입니다. 최근 3개월 평균은 0.0%입니다.",
+      "date": "2026-03-18",
+      "revenue": 350000,
+      "total_cost": 483000,
+      "profit": -133000
+    }
+  ]
+}

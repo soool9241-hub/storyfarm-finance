@@ -1,0 +1,90 @@
+{
+  "generated_at": "2026-03-06T02:18:11.086900",
+  "scenario": "base",
+  "start_date": "2026-03-06",
+  "days": 30,
+  "starting_balance": 8500000,
+  "danger_zone_count": 11,
+  "critical_within_7_days": 0,
+  "danger_zones": [
+    {
+      "date": "2026-03-25",
+      "status": "WARNING",
+      "balance": 4062500,
+      "days_from_start": 19
+    },
+    {
+      "date": "2026-03-26",
+      "status": "WARNING",
+      "balance": 4062500,
+      "days_from_start": 20
+    },
+    {
+      "date": "2026-03-27",
+      "status": "WARNING",
+      "balance": 4062500,
+      "days_from_start": 21
+    },
+    {
+      "date": "2026-03-28",
+      "status": "WARNING",
+      "balance": 4062500,
+      "days_from_start": 22
+    },
+    {
+      "date": "2026-03-29",
+      "status": "WARNING",
+      "balance": 4062500,
+      "days_from_start": 23
+    },
+    {
+      "date": "2026-03-30",
+      "status": "WARNING",
+      "balance": 4062500,
+      "days_from_start": 24
+    },
+    {
+      "date": "2026-03-31",
+      "status": "WARNING",
+      "balance": 4062500,
+      "days_from_start": 25
+    },
+    {
+      "date": "2026-04-01",
+      "status": "WARNING",
+      "balance": 3262500,
+      "days_from_start": 26
+    },
+    {
+      "date": "2026-04-02",
+      "status": "WARNING",
+      "balance": 3262500,
+      "days_from_start": 27
+    },
+    {
+      "date": "2026-04-03",
+      "status": "WARNING",
+      "balance": 3262500,
+      "days_from_start": 28
+    },
+    {
+      "date": "2026-04-04",
+      "status": "WARNING",
+      "balance": 3262500,
+      "days_from_start": 29
+    }
+  ],
+  "summary": {
+    "starting_balance": 8500000,
+    "ending_balance": 3262500,
+    "min_balance": 3262500,
+    "min_balance_date": "2026-04-01",
+    "max_balance": 8500000,
+    "total_income": 0,
+    "total_expense": 5237500,
+    "net_change": -5237500,
+    "danger_days": 0,
+    "warning_days": 11,
+    "critical_days": 0
+  }
+}

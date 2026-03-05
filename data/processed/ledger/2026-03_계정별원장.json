@@ -1,0 +1,349 @@
+{
+  "임차료": {
+    "account": "임차료",
+    "type": "sga",
+    "total_debit": 800000,
+    "total_credit": 0,
+    "balance": 800000,
+    "entries": [
+      {
+        "entry_id": "JE-20260301-001",
+        "date": "2026-03-01",
+        "description": "임대료 임차료 (공방 70%)",
+        "debit": 560000,
+        "credit": 0
+      },
+      {
+        "entry_id": "JE-20260301-002",
+        "date": "2026-03-01",
+        "description": "임대료 임차료 (펜션 30%)",
+        "debit": 240000,
+        "credit": 0
+      }
+    ]
+  },
+  "보통예금": {
+    "account": "보통예금",
+    "type": "asset",
+    "total_debit": 4650000,
+    "total_credit": 7380000,
+    "balance": -2730000,
+    "entries": [
+      {
+        "entry_id": "JE-20260301-001",
+        "date": "2026-03-01",
+        "description": "임대료 임차료 (공방 70%)",
+        "debit": 0,
+        "credit": 560000
+      },
+      {
+        "entry_id": "JE-20260301-002",
+        "date": "2026-03-01",
+        "description": "임대료 임차료 (펜션 30%)",
+        "debit": 0,
+        "credit": 240000
+      },
+      {
+        "entry_id": "JE-20260303-001",
+        "date": "2026-03-03",
+        "description": "재료매입 원재료비 (재료비)",
+        "debit": 0,
+        "credit": 880000
+      },
+      {
+        "entry_id": "JE-20260305-001",
+        "date": "2026-03-05",
+        "description": "제품대금입금 용역매출 (기타)",
+        "debit": 2200000,
+        "credit": 0
+      },
+      {
+        "entry_id": "JE-20260308-001",
+        "date": "2026-03-08",
+        "description": "재료매입 원재료비 (재료비)",
+        "debit": 0,
+        "credit": 550000
+      },
+      {
+        "entry_id": "JE-20260310-001",
+        "date": "2026-03-10",
+        "description": "공과금 기타판관비 (기타)",
+        "debit": 0,
+        "credit": 300000
+      },
+      {
+        "entry_id": "JE-20260312-001",
+        "date": "2026-03-12",
+        "description": "제품대금입금 용역매출 (기타)",
+        "debit": 1650000,
+        "credit": 0
+      },
+      {
+        "entry_id": "JE-20260315-001",
+        "date": "2026-03-15",
+        "description": "국민카드결제 기타판관비 (기타)",
+        "debit": 0,
+        "credit": 1200000
+      },
+      {
+        "entry_id": "JE-20260317-001",
+        "date": "2026-03-17",
+        "description": "신한카드결제 기타판관비 (기타)",
+        "debit": 0,
+        "credit": 800000
+      },
+      {
+        "entry_id": "JE-20260320-001",
+        "date": "2026-03-20",
+        "description": "OK캐피탈 기타판관비 (기타)",
+        "debit": 0,
+        "credit": 850000
+      },
+      {
+        "entry_id": "JE-20260325-001",
+        "date": "2026-03-25",
+        "description": "급여 인건비 (인건비)",
+        "debit": 0,
+        "credit": 2000000
+      },
+      {
+        "entry_id": "JE-20260307-001",
+        "date": "2026-03-07",
+        "description": "네이버 숙박매출 (숙박매출)",
+        "debit": 150000,
+        "credit": 0
+      },
+      {
+        "entry_id": "JE-20260314-001",
+        "date": "2026-03-14",
+        "description": "에어비앤비 숙박매출 (숙박매출)",
+        "debit": 120000,
+        "credit": 0
+      },
+      {
+        "entry_id": "JE-20260321-001",
+        "date": "2026-03-21",
+        "description": "직접예약 숙박매출 (숙박매출)",
+        "debit": 200000,
+        "credit": 0
+      },
+      {
+        "entry_id": "JE-20260322-001",
+        "date": "2026-03-22",
+        "description": "네이버 숙박매출 (숙박매출)",
+        "debit": 150000,
+        "credit": 0
+      },
+      {
+        "entry_id": "JE-20260328-001",
+        "date": "2026-03-28",
+        "description": "에어비앤비 숙박매출 (숙박매출)",
+        "debit": 180000,
+        "credit": 0
+      }
+    ]
+  },
+  "원재료비": {
+    "account": "원재료비",
+    "type": "cogs",
+    "total_debit": 1430000,
+    "total_credit": 0,
+    "balance": 1430000,
+    "entries": [
+      {
+        "entry_id": "JE-20260303-001",
+        "date": "2026-03-03",
+        "description": "재료매입 원재료비 (재료비)",
+        "debit": 880000,
+        "credit": 0
+      },
+      {
+        "entry_id": "JE-20260308-001",
+        "date": "2026-03-08",
+        "description": "재료매입 원재료비 (재료비)",
+        "debit": 550000,
+        "credit": 0
+      }
+    ]
+  },
+  "용역매출": {
+    "account": "용역매출",
+    "type": "revenue",
+    "total_debit": 0,
+    "total_credit": 3850000,
+    "balance": 3850000,
+    "entries": [
+      {
+        "entry_id": "JE-20260305-001",
+        "date": "2026-03-05",
+        "description": "제품대금입금 용역매출 (기타)",
+        "debit": 0,
+        "credit": 2200000
+      },
+      {
+        "entry_id": "JE-20260312-001",
+        "date": "2026-03-12",
+        "description": "제품대금입금 용역매출 (기타)",
+        "debit": 0,
+        "credit": 1650000
+      }
+    ]
+  },
+  "기타판관비": {
+    "account": "기타판관비",
+    "type": "sga",
+    "total_debit": 3150000,
+    "total_credit": 0,
+    "balance": 3150000,
+    "entries": [
+      {
+        "entry_id": "JE-20260310-001",
+        "date": "2026-03-10",
+        "description": "공과금 기타판관비 (기타)",
+        "debit": 300000,
+        "credit": 0
+      },
+      {
+        "entry_id": "JE-20260315-001",
+        "date": "2026-03-15",
+        "description": "국민카드결제 기타판관비 (기타)",
+        "debit": 1200000,
+        "credit": 0
+      },
+      {
+        "entry_id": "JE-20260317-001",
+        "date": "2026-03-17",
+        "description": "신한카드결제 기타판관비 (기타)",
+        "debit": 800000,
+        "credit": 0
+      },
+      {
+        "entry_id": "JE-20260320-001",
+        "date": "2026-03-20",
+        "description": "OK캐피탈 기타판관비 (기타)",
+        "debit": 850000,
+        "credit": 0
+      }
+    ]
+  },
+  "인건비": {
+    "account": "인건비",
+    "type": "sga",
+    "total_debit": 2000000,
+    "total_credit": 0,
+    "balance": 2000000,
+    "entries": [
+      {
+        "entry_id": "JE-20260325-001",
+        "date": "2026-03-25",
+        "description": "급여 인건비 (인건비)",
+        "debit": 2000000,
+        "credit": 0
+      }
+    ]
+  },
+  "숙박매출": {
+    "account": "숙박매출",
+    "type": "revenue",
+    "total_debit": 0,
+    "total_credit": 800000,
+    "balance": 800000,
+    "entries": [
+      {
+        "entry_id": "JE-20260307-001",
+        "date": "2026-03-07",
+        "description": "네이버 숙박매출 (숙박매출)",
+        "debit": 0,
+        "credit": 150000
+      },
+      {
+        "entry_id": "JE-20260314-001",
+        "date": "2026-03-14",
+        "description": "에어비앤비 숙박매출 (숙박매출)",
+        "debit": 0,
+        "credit": 120000
+      },
+      {
+        "entry_id": "JE-20260321-001",
+        "date": "2026-03-21",
+        "description": "직접예약 숙박매출 (숙박매출)",
+        "debit": 0,
+        "credit": 200000
+      },
+      {
+        "entry_id": "JE-20260322-001",
+        "date": "2026-03-22",
+        "description": "네이버 숙박매출 (숙박매출)",
+        "debit": 0,
+        "credit": 150000
+      },
+      {
+        "entry_id": "JE-20260328-001",
+        "date": "2026-03-28",
+        "description": "에어비앤비 숙박매출 (숙박매출)",
+        "debit": 0,
+        "credit": 180000
+      }
+    ]
+  },
+  "감가상각비": {
+    "account": "감가상각비",
+    "type": "sga",
+    "total_debit": 795000,
+    "total_credit": 0,
+    "balance": 795000,
+    "entries": [
+      {
+        "entry_id": "JE-20260331-001",
+        "date": "2026-03-31",
+        "description": "CNC 머신 1호 월 감가상각 (정액법)",
+        "debit": 450000,
+        "credit": 0
+      },
+      {
+        "entry_id": "JE-20260331-002",
+        "date": "2026-03-31",
+        "description": "레이저커터 월 감가상각 (정액법)",
+        "debit": 225000,
+        "credit": 0
+      },
+      {
+        "entry_id": "JE-20260331-003",
+        "date": "2026-03-31",
+        "description": "CNC 라우터 월 감가상각 (정액법)",
+        "debit": 120000,
+        "credit": 0
+      }
+    ]
+  },
+  "감가상각누계액": {
+    "account": "감가상각누계액",
+    "type": "contra_asset",
+    "total_debit": 0,
+    "total_credit": 795000,
+    "balance": -795000,
+    "entries": [
+      {
+        "entry_id": "JE-20260331-001",
+        "date": "2026-03-31",
+        "description": "CNC 머신 1호 월 감가상각 (정액법)",
+        "debit": 0,
+        "credit": 450000
+      },
+      {
+        "entry_id": "JE-20260331-002",
+        "date": "2026-03-31",
+        "description": "레이저커터 월 감가상각 (정액법)",
+        "debit": 0,
+        "credit": 225000
+      },
+      {
+        "entry_id": "JE-20260331-003",
+        "date": "2026-03-31",
+        "description": "CNC 라우터 월 감가상각 (정액법)",
+        "debit": 0,
+        "credit": 120000
+      }
+    ]
+  }
+}

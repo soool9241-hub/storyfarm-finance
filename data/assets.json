@@ -1,0 +1,43 @@
+{
+  "assets": [
+    {
+      "id": "ASSET-001",
+      "name": "CNC 머신 1호",
+      "model": "FANUC Robodrill",
+      "acquired_date": "2023-06-15",
+      "acquisition_cost": 30000000,
+      "useful_life_years": 5,
+      "depreciation_method": "straight_line",
+      "residual_value_rate": 0.1,
+      "maintenance_log": [
+        { "date": "2025-08-10", "cost": 150000, "vendor": "정밀기계", "note": "베어링 교체" },
+        { "date": "2025-11-20", "cost": 80000, "vendor": "정밀기계", "note": "오일 교환" },
+        { "date": "2026-02-05", "cost": 350000, "vendor": "CNC서비스", "note": "스핀들 수리" }
+      ]
+    },
+    {
+      "id": "ASSET-002",
+      "name": "레이저커터",
+      "model": "Trotec Speedy 360",
+      "acquired_date": "2024-01-10",
+      "acquisition_cost": 15000000,
+      "useful_life_years": 5,
+      "depreciation_method": "straight_line",
+      "residual_value_rate": 0.1,
+      "maintenance_log": [
+        { "date": "2025-07-15", "cost": 200000, "vendor": "레이저테크", "note": "렌즈 교체" }
+      ]
+    },
+    {
+      "id": "ASSET-003",
+      "name": "CNC 라우터",
+      "model": "Shapeoko HDM",
+      "acquired_date": "2024-03-20",
+      "acquisition_cost": 8000000,
+      "useful_life_years": 5,
+      "depreciation_method": "straight_line",
+      "residual_value_rate": 0.1,
+      "maintenance_log": []
+    }
+  ]
+}

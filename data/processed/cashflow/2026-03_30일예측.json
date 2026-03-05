@@ -1,0 +1,401 @@
+{
+  "generated_at": "2026-03-06T02:18:11.085418",
+  "scenario": "base",
+  "start_date": "2026-03-06",
+  "days": 30,
+  "starting_balance": 8500000,
+  "summary": {
+    "starting_balance": 8500000,
+    "ending_balance": 3262500,
+    "min_balance": 3262500,
+    "min_balance_date": "2026-04-01",
+    "max_balance": 8500000,
+    "total_income": 0,
+    "total_expense": 5237500,
+    "net_change": -5237500,
+    "danger_days": 0,
+    "warning_days": 11,
+    "critical_days": 0
+  },
+  "daily_forecast": [
+    {
+      "date": "2026-03-06",
+      "weekday": "금",
+      "income": 0,
+      "expense": 0,
+      "balance": 8500000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-07",
+      "weekday": "토",
+      "income": 0,
+      "expense": 0,
+      "balance": 8500000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-08",
+      "weekday": "일",
+      "income": 0,
+      "expense": 0,
+      "balance": 8500000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-09",
+      "weekday": "월",
+      "income": 0,
+      "expense": 0,
+      "balance": 8500000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-10",
+      "weekday": "화",
+      "income": 0,
+      "expense": 300000,
+      "balance": 8200000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": [
+        {
+          "name": "공과금",
+          "amount": 300000
+        }
+      ]
+    },
+    {
+      "date": "2026-03-11",
+      "weekday": "수",
+      "income": 0,
+      "expense": 0,
+      "balance": 8200000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-12",
+      "weekday": "목",
+      "income": 0,
+      "expense": 0,
+      "balance": 8200000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-13",
+      "weekday": "금",
+      "income": 0,
+      "expense": 0,
+      "balance": 8200000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-14",
+      "weekday": "토",
+      "income": 0,
+      "expense": 0,
+      "balance": 8200000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-15",
+      "weekday": "일",
+      "income": 0,
+      "expense": 537500,
+      "balance": 7662500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": [
+        {
+          "name": "국민은행 일시상환 이자",
+          "amount": 37500
+        },
+        {
+          "name": "국민카드 결제",
+          "amount": 500000
+        }
+      ]
+    },
+    {
+      "date": "2026-03-16",
+      "weekday": "월",
+      "income": 0,
+      "expense": 0,
+      "balance": 7662500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-17",
+      "weekday": "화",
+      "income": 0,
+      "expense": 500000,
+      "balance": 7162500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": [
+        {
+          "name": "신한카드 결제",
+          "amount": 500000
+        }
+      ]
+    },
+    {
+      "date": "2026-03-18",
+      "weekday": "수",
+      "income": 0,
+      "expense": 0,
+      "balance": 7162500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-19",
+      "weekday": "목",
+      "income": 0,
+      "expense": 0,
+      "balance": 7162500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-20",
+      "weekday": "금",
+      "income": 0,
+      "expense": 850000,
+      "balance": 6312500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": [
+        {
+          "name": "OK캐피탈",
+          "amount": 850000
+        }
+      ]
+    },
+    {
+      "date": "2026-03-21",
+      "weekday": "토",
+      "income": 0,
+      "expense": 0,
+      "balance": 6312500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-22",
+      "weekday": "일",
+      "income": 0,
+      "expense": 0,
+      "balance": 6312500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-23",
+      "weekday": "월",
+      "income": 0,
+      "expense": 0,
+      "balance": 6312500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-24",
+      "weekday": "화",
+      "income": 0,
+      "expense": 0,
+      "balance": 6312500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-25",
+      "weekday": "수",
+      "income": 0,
+      "expense": 2250000,
+      "balance": 4062500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": [
+        {
+          "name": "카드론",
+          "amount": 250000
+        },
+        {
+          "name": "급여",
+          "amount": 2000000
+        }
+      ]
+    },
+    {
+      "date": "2026-03-26",
+      "weekday": "목",
+      "income": 0,
+      "expense": 0,
+      "balance": 4062500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-27",
+      "weekday": "금",
+      "income": 0,
+      "expense": 0,
+      "balance": 4062500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-28",
+      "weekday": "토",
+      "income": 0,
+      "expense": 0,
+      "balance": 4062500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-29",
+      "weekday": "일",
+      "income": 0,
+      "expense": 0,
+      "balance": 4062500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-30",
+      "weekday": "월",
+      "income": 0,
+      "expense": 0,
+      "balance": 4062500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-31",
+      "weekday": "화",
+      "income": 0,
+      "expense": 0,
+      "balance": 4062500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-04-01",
+      "weekday": "수",
+      "income": 0,
+      "expense": 800000,
+      "balance": 3262500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": [
+        {
+          "name": "월세",
+          "amount": 800000
+        }
+      ]
+    },
+    {
+      "date": "2026-04-02",
+      "weekday": "목",
+      "income": 0,
+      "expense": 0,
+      "balance": 3262500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-04-03",
+      "weekday": "금",
+      "income": 0,
+      "expense": 0,
+      "balance": 3262500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-04-04",
+      "weekday": "토",
+      "income": 0,
+      "expense": 0,
+      "balance": 3262500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    }
+  ],
+  "scenarios_comparison": {
+    "best": {
+      "starting_balance": 8500000,
+      "ending_balance": 3262500,
+      "min_balance": 3262500,
+      "min_balance_date": "2026-04-01",
+      "max_balance": 8500000,
+      "total_income": 0,
+      "total_expense": 5237500,
+      "net_change": -5237500,
+      "danger_days": 0,
+      "warning_days": 11,
+      "critical_days": 0
+    },
+    "base": {
+      "starting_balance": 8500000,
+      "ending_balance": 3262500,
+      "min_balance": 3262500,
+      "min_balance_date": "2026-04-01",
+      "max_balance": 8500000,
+      "total_income": 0,
+      "total_expense": 5237500,
+      "net_change": -5237500,
+      "danger_days": 0,
+      "warning_days": 11,
+      "critical_days": 0
+    },
+    "worst": {
+      "starting_balance": 8500000,
+      "ending_balance": 3262500,
+      "min_balance": 3262500,
+      "min_balance_date": "2026-04-01",
+      "max_balance": 8500000,
+      "total_income": 0,
+      "total_expense": 5237500,
+      "net_change": -5237500,
+      "danger_days": 0,
+      "warning_days": 11,
+      "critical_days": 0
+    }
+  }
+}
