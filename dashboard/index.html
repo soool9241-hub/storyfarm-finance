@@ -484,6 +484,105 @@
     opacity: 0.5;
     cursor: not-allowed;
   }
+  .btn-red { background: var(--red); color: #fff; }
+  .btn-red:hover { background: #c0392b; }
+  .btn-blue { background: var(--blue); color: #fff; }
+  .btn-blue:hover { background: #2980b9; }
+  .btn-yellow { background: var(--yellow); color: #000; }
+  .btn-yellow:hover { background: #d4ac0d; }
+
+  /* ── CRUD Section ── */
+  .crud-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+    background: var(--bg);
+    padding: 4px;
+    border-radius: 10px;
+  }
+  .crud-tab {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text-dim);
+    font-family: 'Pretendard', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .crud-tab.active { background: var(--green); color: #fff; }
+  .crud-tab:hover:not(.active) { color: var(--text); }
+  .crud-content { display: none; }
+  .crud-content.active { display: block; }
+  .crud-toolbar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .crud-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+  .crud-table th {
+    text-align: left;
+    padding: 8px 8px;
+    border-bottom: 2px solid var(--border);
+    color: var(--text-dim);
+    font-weight: 600;
+    font-size: 11px;
+    position: sticky;
+    top: 0;
+    background: var(--card);
+  }
+  .crud-table td {
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--border);
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .crud-table tr:hover td { background: var(--card-hover); }
+  .crud-table tr.selected td { background: rgba(46,125,50,0.15); }
+  .crud-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .crud-table .actions { white-space: nowrap; }
+  .crud-scroll {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  .crud-msg {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  /* CRUD Edit Modal */
+  .edit-form { display: grid; grid-template-columns: 120px 1fr; gap: 10px; align-items: center; }
+  .edit-form label { font-size: 13px; color: var(--text-dim); text-align: right; }
+  .edit-form input, .edit-form select {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: 'Pretendard', sans-serif;
+    outline: none;
+  }
+  .edit-form input:focus { border-color: var(--green); }
+  @media (max-width: 700px) {
+    .edit-form { grid-template-columns: 1fr; }
+    .edit-form label { text-align: left; }
+    .crud-scroll { max-height: 300px; }
+  }
   .agent-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -838,6 +937,83 @@
 
       <!-- 내보내기 상태 -->
       <div id="exportStatus" style="margin-top:12px"></div>
+    </div>
+  </div>
+
+  <!-- CRUD Data Management -->
+  <div class="chart-grid">
+    <div class="chart-card full-card">
+      <h3>데이터 관리</h3>
+      <div class="crud-tabs">
+        <button class="crud-tab active" onclick="switchCrud('transactions')">거래내역</button>
+        <button class="crud-tab" onclick="switchCrud('assets')">자산</button>
+        <button class="crud-tab" onclick="switchCrud('debts')">채무</button>
+      </div>
+
+      <!-- 거래내역 -->
+      <div class="crud-content active" id="crud-transactions">
+        <div class="crud-toolbar">
+          <button class="btn btn-green btn-sm" onclick="crudAdd('transactions')">+ 추가</button>
+          <button class="btn btn-blue btn-sm" onclick="crudReload('transactions')">새로고침</button>
+          <span id="crud-transactions-count" style="font-size:12px;color:var(--text-dim);line-height:28px"></span>
+        </div>
+        <div class="crud-scroll"><table class="crud-table" id="crud-transactions-table">
+          <thead><tr>
+            <th>날짜</th><th>적요</th><th>유형</th><th class="num">입금</th><th class="num">출금</th><th>분류</th><th class="actions">관리</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table></div>
+        <div id="crud-transactions-msg" class="crud-msg"></div>
+      </div>
+
+      <!-- 자산 -->
+      <div class="crud-content" id="crud-assets">
+        <div class="crud-toolbar">
+          <button class="btn btn-green btn-sm" onclick="crudAdd('assets')">+ 추가</button>
+          <button class="btn btn-blue btn-sm" onclick="crudReload('assets')">새로고침</button>
+          <span id="crud-assets-count" style="font-size:12px;color:var(--text-dim);line-height:28px"></span>
+        </div>
+        <div class="crud-scroll"><table class="crud-table" id="crud-assets-table">
+          <thead><tr>
+            <th>ID</th><th>자산명</th><th class="num">취득원가</th><th>취득일</th><th class="num">내용연수</th><th>상각방법</th><th class="actions">관리</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table></div>
+        <div id="crud-assets-msg" class="crud-msg"></div>
+      </div>
+
+      <!-- 채무 -->
+      <div class="crud-content" id="crud-debts">
+        <div class="crud-toolbar">
+          <button class="btn btn-green btn-sm" onclick="crudAdd('debts')">+ 추가</button>
+          <button class="btn btn-blue btn-sm" onclick="crudReload('debts')">새로고침</button>
+          <span id="crud-debts-count" style="font-size:12px;color:var(--text-dim);line-height:28px"></span>
+        </div>
+        <div class="crud-scroll"><table class="crud-table" id="crud-debts-table">
+          <thead><tr>
+            <th>ID</th><th>채무명</th><th>유형</th><th class="num">잔액</th><th class="num">이율</th><th class="num">월상환</th><th class="actions">관리</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table></div>
+        <div id="crud-debts-msg" class="crud-msg"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CRUD Edit Modal -->
+  <div class="modal-overlay" id="crudModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="crudModalTitle">항목 편집</h3>
+        <button class="modal-close" onclick="closeCrudModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="edit-form" id="crudForm"></div>
+        <div style="margin-top:16px;display:flex;gap:8px;justify-content:flex-end">
+          <button class="btn btn-outline" onclick="closeCrudModal()">취소</button>
+          <button class="btn btn-green" onclick="saveCrudForm()">저장</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1498,8 +1674,23 @@ async function loadRawFiles() {
     el.innerHTML = files.map(f => `
       <div class="file-item">
         <span class="file-name">${f.name}</span>
-        <span class="file-meta">${(f.size/1024).toFixed(1)}KB | ${f.modified}</span>
+        <span style="display:flex;align-items:center;gap:8px">
+          <span class="file-meta">${(f.size/1024).toFixed(1)}KB | ${f.modified}</span>
+          <button class="btn btn-red btn-sm" style="padding:2px 8px;font-size:10px" onclick="deleteRawFile('${f.name}')">삭제</button>
+        </span>
       </div>`).join('');
+  } catch(e) {}
+}
+
+async function deleteRawFile(filename) {
+  if (!confirm(`"${filename}" 파일을 삭제하시겠습니까?`)) return;
+  try {
+    await fetch('/api/files/raw/delete', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ filename }),
+    });
+    loadRawFiles();
   } catch(e) {}
 }
 
@@ -1523,6 +1714,218 @@ function showExportStatus(msg) {
   const el = document.getElementById('exportStatus');
   el.innerHTML = `<div class="ocr-status" style="color:var(--green-light)">${msg}</div>`;
   setTimeout(() => { el.innerHTML = ''; }, 3000);
+}
+
+// ── CRUD Data Management ──
+
+let crudData = { transactions: [], assets: [], debts: [] };
+let crudEditState = { type: '', index: -1 }; // -1 = new
+
+const CRUD_FIELDS = {
+  transactions: [
+    { key: 'date', label: '날짜', type: 'date' },
+    { key: 'description', label: '적요', type: 'text' },
+    { key: 'type', label: '유형', type: 'select', options: ['입금','출금','이체'] },
+    { key: 'deposit', label: '입금액', type: 'number' },
+    { key: 'withdrawal', label: '출금액', type: 'number' },
+    { key: 'category', label: '분류', type: 'text' },
+    { key: 'business_type', label: '사업구분', type: 'select', options: ['workshop','pension','common'] },
+    { key: 'note', label: '비고', type: 'text' },
+  ],
+  assets: [
+    { key: 'id', label: 'ID', type: 'text' },
+    { key: 'name', label: '자산명', type: 'text' },
+    { key: 'acquisition_cost', label: '취득원가', type: 'number' },
+    { key: 'acquisition_date', label: '취득일', type: 'date' },
+    { key: 'useful_life_years', label: '내용연수(년)', type: 'number' },
+    { key: 'residual_rate', label: '잔존가치율', type: 'number', step: '0.01' },
+    { key: 'depreciation_method', label: '상각방법', type: 'select', options: ['straight','declining'] },
+    { key: 'location', label: '설치장소', type: 'text' },
+  ],
+  debts: [
+    { key: 'id', label: 'ID', type: 'text' },
+    { key: 'name', label: '채무명', type: 'text' },
+    { key: 'type', label: '유형', type: 'text' },
+    { key: 'original_amount', label: '원금', type: 'number' },
+    { key: 'current_balance', label: '현재잔액', type: 'number' },
+    { key: 'interest_rate', label: '이율(소수)', type: 'number', step: '0.001' },
+    { key: 'monthly_payment', label: '월상환액', type: 'number' },
+    { key: 'payment_day', label: '상환일', type: 'number' },
+    { key: 'start_date', label: '시작일', type: 'date' },
+    { key: 'due_date', label: '만기일', type: 'date' },
+  ],
+};
+
+function switchCrud(type) {
+  document.querySelectorAll('.crud-tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.crud-content').forEach(c => c.classList.remove('active'));
+  document.getElementById(`crud-${type}`).classList.add('active');
+  event.target.classList.add('active');
+  crudReload(type);
+}
+
+async function crudReload(type) {
+  try {
+    const res = await fetch(`/api/crud/${type}`);
+    crudData[type] = await res.json();
+    renderCrudTable(type);
+  } catch(e) {
+    showCrudMsg(type, '데이터 로드 실패', true);
+  }
+}
+
+function renderCrudTable(type) {
+  const tbody = document.querySelector(`#crud-${type}-table tbody`);
+  const items = crudData[type] || [];
+  document.getElementById(`crud-${type}-count`).textContent = `총 ${items.length}건`;
+
+  if (!items.length) {
+    tbody.innerHTML = `<tr><td colspan="7" style="color:var(--text-dim);text-align:center;padding:20px">데이터 없음</td></tr>`;
+    return;
+  }
+
+  if (type === 'transactions') {
+    tbody.innerHTML = items.map((item, i) => `<tr>
+      <td>${item.date || '-'}</td>
+      <td title="${item.description || ''}">${item.description || '-'}</td>
+      <td>${item.type || '-'}</td>
+      <td class="num" style="color:var(--green-light)">${item.deposit ? KRW(item.deposit) : ''}</td>
+      <td class="num" style="color:var(--red)">${item.withdrawal ? KRW(item.withdrawal) : ''}</td>
+      <td>${item.category || item.business_type || '-'}</td>
+      <td class="actions">
+        <button class="btn btn-yellow btn-sm" onclick="crudEdit('transactions',${i})">수정</button>
+        <button class="btn btn-red btn-sm" onclick="crudDelete('transactions',${i})">삭제</button>
+      </td>
+    </tr>`).join('');
+  } else if (type === 'assets') {
+    tbody.innerHTML = items.map((item, i) => `<tr>
+      <td>${item.id || '-'}</td>
+      <td>${item.name || '-'}</td>
+      <td class="num">${item.acquisition_cost ? KRW(item.acquisition_cost) : '-'}</td>
+      <td>${item.acquisition_date || '-'}</td>
+      <td class="num">${item.useful_life_years || '-'}년</td>
+      <td>${item.depreciation_method || '-'}</td>
+      <td class="actions">
+        <button class="btn btn-yellow btn-sm" onclick="crudEdit('assets',${i})">수정</button>
+        <button class="btn btn-red btn-sm" onclick="crudDelete('assets',${i})">삭제</button>
+      </td>
+    </tr>`).join('');
+  } else if (type === 'debts') {
+    tbody.innerHTML = items.map((item, i) => `<tr>
+      <td>${item.id || '-'}</td>
+      <td>${item.name || '-'}</td>
+      <td>${item.type || '-'}</td>
+      <td class="num">${item.current_balance ? KRW(item.current_balance) : '-'}</td>
+      <td class="num">${item.interest_rate ? (item.interest_rate * 100).toFixed(1) + '%' : '-'}</td>
+      <td class="num">${item.monthly_payment ? KRW(item.monthly_payment) : '-'}</td>
+      <td class="actions">
+        <button class="btn btn-yellow btn-sm" onclick="crudEdit('debts',${i})">수정</button>
+        <button class="btn btn-red btn-sm" onclick="crudDelete('debts',${i})">삭제</button>
+      </td>
+    </tr>`).join('');
+  }
+}
+
+function crudAdd(type) {
+  crudEditState = { type, index: -1 };
+  const fields = CRUD_FIELDS[type];
+  document.getElementById('crudModalTitle').textContent = `${type === 'transactions' ? '거래' : type === 'assets' ? '자산' : '채무'} 추가`;
+  renderCrudForm(fields, {});
+  document.getElementById('crudModal').classList.add('show');
+}
+
+function crudEdit(type, index) {
+  crudEditState = { type, index };
+  const fields = CRUD_FIELDS[type];
+  const item = crudData[type][index];
+  document.getElementById('crudModalTitle').textContent = `${type === 'transactions' ? '거래' : type === 'assets' ? '자산' : '채무'} 수정`;
+  renderCrudForm(fields, item);
+  document.getElementById('crudModal').classList.add('show');
+}
+
+function renderCrudForm(fields, item) {
+  const form = document.getElementById('crudForm');
+  form.innerHTML = fields.map(f => {
+    const val = item[f.key] ?? '';
+    if (f.type === 'select') {
+      const opts = f.options.map(o => `<option value="${o}" ${val === o ? 'selected' : ''}>${o}</option>`).join('');
+      return `<label>${f.label}</label><select id="crud-field-${f.key}">${opts}</select>`;
+    }
+    const step = f.step ? `step="${f.step}"` : '';
+    return `<label>${f.label}</label><input type="${f.type}" id="crud-field-${f.key}" value="${val}" ${step}>`;
+  }).join('');
+}
+
+async function saveCrudForm() {
+  const { type, index } = crudEditState;
+  const fields = CRUD_FIELDS[type];
+  const item = {};
+  fields.forEach(f => {
+    let val = document.getElementById(`crud-field-${f.key}`).value;
+    if (f.type === 'number' && val !== '') {
+      val = parseFloat(val);
+    }
+    if (val !== '' && val !== null) item[f.key] = val;
+  });
+
+  const endpoint = index === -1 ? `/api/crud/${type}/add` : `/api/crud/${type}/update`;
+  const body = index === -1 ? { item } : { index, item };
+
+  try {
+    const res = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    const result = await res.json();
+    if (result.ok) {
+      closeCrudModal();
+      crudReload(type);
+      showCrudMsg(type, result.message || '저장 완료');
+    } else {
+      showCrudMsg(type, result.error || '저장 실패', true);
+    }
+  } catch(e) {
+    showCrudMsg(type, '저장 실패: ' + e.message, true);
+  }
+}
+
+async function crudDelete(type, index) {
+  const item = crudData[type][index];
+  const name = item.name || item.description || item.id || `#${index + 1}`;
+  if (!confirm(`"${name}" 항목을 삭제하시겠습니까?`)) return;
+
+  try {
+    const res = await fetch(`/api/crud/${type}/delete`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ index }),
+    });
+    const result = await res.json();
+    if (result.ok) {
+      crudReload(type);
+      showCrudMsg(type, result.message || '삭제 완료');
+    } else {
+      showCrudMsg(type, result.error || '삭제 실패', true);
+    }
+  } catch(e) {
+    showCrudMsg(type, '삭제 실패: ' + e.message, true);
+  }
+}
+
+function closeCrudModal() {
+  document.getElementById('crudModal').classList.remove('show');
+}
+document.getElementById('crudModal').addEventListener('click', (e) => {
+  if (e.target === e.currentTarget) closeCrudModal();
+});
+
+function showCrudMsg(type, msg, isError = false) {
+  const el = document.getElementById(`crud-${type}-msg`);
+  el.style.color = isError ? 'var(--red)' : 'var(--green-light)';
+  el.style.background = isError ? 'var(--red-dim)' : 'rgba(46,125,50,0.1)';
+  el.textContent = msg;
+  setTimeout(() => { el.textContent = ''; el.style.background = ''; }, 4000);
 }
 
 // ── Agent Control ──
@@ -1697,8 +2100,9 @@ async function reloadDashboard() {
     const agents = await loadAgents();
     renderAgents(agents);
 
-    // 원본 파일 목록
+    // 원본 파일 목록 + CRUD 초기 로드
     loadRawFiles();
+    crudReload('transactions');
   } catch (err) {
     document.getElementById('loading').innerHTML =
       `<div style="color:var(--red)">데이터 로딩 오류: ${err.message}</div>

@@ -106,6 +106,94 @@ AGENTS = {
 }
 
 
+# ── CRUD 함수 ──
+
+CRUD_PATHS = {
+    "transactions": PROCESSED / "transactions" / "2026-03_transactions.json",
+    "assets": DATA / "assets.json",
+    "debts": DATA / "debts.json",
+}
+
+
+def crud_load(data_type: str) -> list:
+    """데이터 타입별 항목 리스트 로드."""
+    path = CRUD_PATHS.get(data_type)
+    if not path or not path.exists():
+        return []
+    with open(str(path), "r", encoding="utf-8") as f:
+        data = json.load(f)
+    if isinstance(data, list):
+        return data
+    if isinstance(data, dict):
+        # assets.json → {assets: [...]}, debts.json → {debts: [...]}
+        for key in ["assets", "debts", "transactions", "items"]:
+            if key in data and isinstance(data[key], list):
+                return data[key]
+        return [data]
+    return []
+
+
+def crud_save_all(data_type: str, items: list) -> dict:
+    """전체 항목을 파일에 저장."""
+    path = CRUD_PATHS.get(data_type)
+    if not path:
+        return {"error": f"알 수 없는 데이터 타입: {data_type}"}
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    # 원래 파일 구조 유지
+    if data_type == "assets":
+        save_data = {"assets": items}
+    elif data_type == "debts":
+        save_data = {"debts": items}
+    else:
+        save_data = items
+
+    with open(str(path), "w", encoding="utf-8") as f:
+        json.dump(save_data, f, ensure_ascii=False, indent=2, default=str)
+
+    return {"ok": True, "count": len(items), "message": f"{data_type} {len(items)}건 저장 완료"}
+
+
+def crud_add(data_type: str, item: dict) -> dict:
+    """항목 1건 추가."""
+    items = crud_load(data_type)
+    items.append(item)
+    return crud_save_all(data_type, items)
+
+
+def crud_update(data_type: str, index: int, item: dict) -> dict:
+    """인덱스 기준으로 항목 1건 수정."""
+    items = crud_load(data_type)
+    if 0 <= index < len(items):
+        items[index] = item
+        return crud_save_all(data_type, items)
+    return {"error": f"인덱스 범위 초과: {index}"}
+
+
+def crud_delete(data_type: str, index: int) -> dict:
+    """인덱스 기준으로 항목 1건 삭제."""
+    items = crud_load(data_type)
+    if 0 <= index < len(items):
+        removed = items.pop(index)
+        result = crud_save_all(data_type, items)
+        result["removed"] = removed
+        return result
+    return {"error": f"인덱스 범위 초과: {index}"}
+
+
+def crud_delete_raw_file(filename: str) -> dict:
+    """data/raw/ 파일 삭제."""
+    raw_dir = ROOT / "data" / "raw"
+    filepath = raw_dir / filename
+    if not filepath.exists():
+        return {"error": f"파일 없음: {filename}"}
+    if not str(filepath.resolve()).startswith(str(raw_dir.resolve())):
+        return {"error": "잘못된 경로"}
+    filepath.unlink()
+    return {"ok": True, "message": f"{filename} 삭제 완료"}
+
+
 def _run_agent_thread(agent_key: str, custom_args: str = None):
     """에이전트를 백그라운드 스레드에서 실행."""
     info = AGENTS[agent_key]
@@ -510,7 +598,6 @@ class DashboardHandler(http.server.SimpleHTTPRequestHandler):
             else:
                 self._serve_json({"error": f"리포트 없음: {report_name}"})
         elif path == "/api/files/raw":
-            # data/raw/ 파일 목록
             raw_dir = ROOT / "data" / "raw"
             files = []
             if raw_dir.exists():
@@ -522,6 +609,9 @@ class DashboardHandler(http.server.SimpleHTTPRequestHandler):
                             "modified": datetime.fromtimestamp(f.stat().st_mtime).strftime("%Y-%m-%d %H:%M"),
                         })
             self._serve_json(files)
+        elif path.startswith("/api/crud/"):
+            data_type = path.split("/")[-1]
+            self._serve_json(crud_load(data_type))
         else:
             self.send_error(404)
 
@@ -561,6 +651,36 @@ class DashboardHandler(http.server.SimpleHTTPRequestHandler):
             )
             thread.start()
             self._serve_json({"ok": True, "message": f"{AGENTS[agent_key]['name']} 실행 시작"})
+
+        elif path.startswith("/api/crud/") and "/save" in path:
+            data_type = path.replace("/api/crud/", "").replace("/save", "")
+            body = self._read_body()
+            items = body.get("items", [])
+            self._serve_json(crud_save_all(data_type, items))
+
+        elif path.startswith("/api/crud/") and "/add" in path:
+            data_type = path.replace("/api/crud/", "").replace("/add", "")
+            body = self._read_body()
+            item = body.get("item", {})
+            self._serve_json(crud_add(data_type, item))
+
+        elif path.startswith("/api/crud/") and "/update" in path:
+            data_type = path.replace("/api/crud/", "").replace("/update", "")
+            body = self._read_body()
+            index = body.get("index", -1)
+            item = body.get("item", {})
+            self._serve_json(crud_update(data_type, index, item))
+
+        elif path.startswith("/api/crud/") and "/delete" in path:
+            data_type = path.replace("/api/crud/", "").replace("/delete", "")
+            body = self._read_body()
+            index = body.get("index", -1)
+            self._serve_json(crud_delete(data_type, index))
+
+        elif path == "/api/files/raw/delete":
+            body = self._read_body()
+            filename = body.get("filename", "")
+            self._serve_json(crud_delete_raw_file(filename))
 
         elif path == "/api/upload/excel":
             body = self._read_body()
