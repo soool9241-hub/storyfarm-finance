@@ -739,49 +739,184 @@
   @keyframes spin { to { transform: rotate(360deg); } }
 
   /* ── Responsive ── */
+
+  /* 태블릿 (1100px 이하) */
   @media (max-width: 1100px) {
     .summary-grid { grid-template-columns: repeat(3, 1fr); }
     .chart-grid { grid-template-columns: 1fr; }
-    .scenario-grid { grid-template-columns: 1fr; }
+    .scenario-grid { grid-template-columns: repeat(2, 1fr); }
+    .container { padding: 20px 24px 48px; }
   }
+
+  /* 모바일 (700px 이하) */
   @media (max-width: 700px) {
-    .summary-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-    .chart-grid { gap: 14px; }
-    .container { padding: 12px; }
-    .header { padding: 14px 16px; }
-    .header h1 { font-size: 17px; }
-    .logo { width: 36px; height: 36px; font-size: 16px; border-radius: 10px; }
+    /* 헤더 */
+    .header {
+      padding: 12px 16px;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+    }
     .header-left { gap: 10px; }
-    .header-right { gap: 8px; font-size: 12px; }
+    .header-right {
+      width: 100%;
+      justify-content: flex-start;
+      gap: 8px;
+      font-size: 12px;
+    }
+    .header h1 { font-size: 17px; }
+    .logo { width: 34px; height: 34px; font-size: 15px; border-radius: 9px; }
     .month-badge { padding: 4px 12px; font-size: 12px; }
-    .sum-card { padding: 14px; }
-    .sum-card .label { font-size: 10px; }
-    .sum-card .value { font-size: 17px; }
-    .sum-card .sub { font-size: 10px; }
-    .chart-card { padding: 16px; }
-    .chart-card h3 { font-size: 14px; margin-bottom: 12px; padding-bottom: 10px; }
+
+    /* 레이아웃 */
+    .container { padding: 12px 10px 40px; }
+
+    /* 요약 카드 - 2열 */
+    .summary-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .sum-card { padding: 12px; border-radius: 10px; }
+    .sum-card .label { font-size: 10px; margin-bottom: 4px; }
+    .sum-card .value { font-size: 16px; }
+    .sum-card .sub { font-size: 9px; }
+    .sum-card:hover { transform: none; } /* 모바일에서 hover 효과 제거 */
+
+    /* 차트 */
+    .chart-grid { gap: 12px; }
+    .chart-card { padding: 14px; border-radius: 10px; }
+    .chart-card h3 { font-size: 13px; margin-bottom: 10px; padding-bottom: 8px; }
+    .chart-card h3 .badge { font-size: 10px; padding: 2px 6px; }
     .chart-wrap { height: 220px; }
     .chart-wrap-sm { height: 180px; }
-    .data-table { font-size: 11px; }
+
+    /* 테이블 - 가로 스크롤 */
+    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -14px; padding: 0 14px; }
+    .data-table { font-size: 11px; min-width: 500px; }
     .data-table th { padding: 8px 6px; font-size: 10px; }
     .data-table td { padding: 8px 6px; }
+
+    /* 손익계산서 */
     .stmt-row { font-size: 12px; padding: 6px 0; }
     .stmt-row.total-row { font-size: 14px; }
+    .stmt-row .indent { padding-left: 12px; }
+
+    /* 진행바 */
     .prog-label { font-size: 11px; }
-    .scenario-grid { grid-template-columns: 1fr; gap: 10px; }
+
+    /* 시나리오 */
+    .scenario-grid { grid-template-columns: 1fr; gap: 8px; }
     .scenario-card { padding: 12px; }
-    .scenario-card .sc-value { font-size: 18px; }
+    .scenario-card .sc-value { font-size: 17px; }
+
+    /* 에이전트 */
+    .agent-panel-header { flex-direction: column; gap: 10px; align-items: flex-start; }
+    .agent-panel-header h2 { font-size: 15px; }
+    .agent-panel-header .btn { width: 100%; text-align: center; }
+
+    /* 버튼 터치 크기 */
+    .btn { padding: 10px 20px; min-height: 44px; }
+    .btn-sm { padding: 8px 14px; min-height: 36px; font-size: 12px; }
+
+    /* CRUD */
+    .crud-tabs { gap: 2px; }
+    .crud-tab { padding: 8px 6px; font-size: 11px; }
+    .crud-toolbar { gap: 6px; }
+    .crud-scroll { max-height: 300px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .crud-table { min-width: 600px; }
+    .crud-table th { font-size: 10px; padding: 6px 6px; }
+    .crud-table td { padding: 5px 6px; font-size: 11px; }
+
+    /* 모달 */
+    .modal-overlay { padding: 10px; align-items: flex-end; }
+    .modal-box { max-width: 100%; max-height: 90vh; border-radius: 14px 14px 0 0; }
+    .modal-header { padding: 14px 16px; }
+    .modal-header h3 { font-size: 15px; }
+    .modal-body { padding: 14px 16px; }
+    .modal-body pre { font-size: 11px; }
+    .edit-form { grid-template-columns: 1fr; gap: 6px; }
+    .edit-form label { text-align: left; font-size: 12px; }
+    .edit-form input, .edit-form select { padding: 10px 12px; font-size: 14px; min-height: 44px; }
+
+    /* 데이터 입력/내보내기 */
+    .tab-btns { gap: 2px; }
+    .tab-btn { padding: 8px 8px; font-size: 12px; }
+    .export-grid { grid-template-columns: 1fr; }
+    .export-btn { padding: 12px 14px; }
+    .drop-zone { padding: 24px 16px; }
+    .drop-zone .drop-icon { font-size: 28px; }
+    .ocr-edit-row { grid-template-columns: 70px 1fr 90px 60px 30px; gap: 4px; }
+    .ocr-edit-row input { padding: 6px; font-size: 11px; }
+
+    /* 파일 목록 */
+    .file-item { padding: 10px 12px; flex-wrap: wrap; gap: 4px; }
+    .file-item .file-name { font-size: 11px; width: 100%; }
   }
+
+  /* 초소형 모바일 (420px 이하) */
   @media (max-width: 420px) {
-    .summary-grid { grid-template-columns: 1fr; }
-    .header-left { gap: 8px; }
+    /* 헤더 */
+    .header-right span:not(.month-badge):not(.status-dot) { display: none; }
     .header h1 { font-size: 15px; }
-    .header-right span:not(.month-badge) { display: none; }
-    .sum-card .value { font-size: 16px; }
+
+    /* 요약 카드 - 1열 */
+    .summary-grid { grid-template-columns: 1fr; gap: 6px; }
+    .sum-card { display: flex; align-items: center; gap: 10px; padding: 10px 14px; }
+    .sum-card .label { margin-bottom: 0; flex-shrink: 0; min-width: 80px; }
+    .sum-card .value { font-size: 16px; flex: 1; text-align: right; }
+    .sum-card .sub { display: none; }
+
+    /* 차트 높이 축소 */
     .chart-wrap { height: 200px; }
     .chart-wrap-sm { height: 160px; }
-    /* 테이블 가로 스크롤 */
-    .data-table { display: block; overflow-x: auto; white-space: nowrap; }
+
+    /* 에이전트 1열 */
+    .agent-grid { grid-template-columns: 1fr; }
+
+    /* OCR 편집 세로 배치 */
+    .ocr-edit-row {
+      grid-template-columns: 1fr 1fr 30px;
+      gap: 4px;
+    }
+    .ocr-edit-row input:nth-child(1) { grid-column: 1 / -1; }
+    .ocr-edit-row input:nth-child(2) { grid-column: 1 / -1; }
+
+    /* 탭 글자 줄임 */
+    .crud-tab { font-size: 10px; padding: 7px 4px; }
+    .tab-btn { font-size: 11px; padding: 7px 4px; }
+
+    /* 모달 풀스크린 */
+    .modal-overlay { padding: 0; }
+    .modal-box { max-height: 100vh; border-radius: 0; }
+  }
+
+  /* 터치 디바이스 최적화 */
+  @media (hover: none) and (pointer: coarse) {
+    .sum-card:hover { transform: none; box-shadow: none; border-color: var(--border); }
+    .agent-card:hover { box-shadow: none; border-color: var(--border); }
+    .export-btn:hover { border-color: var(--border); background: var(--bg); }
+    /* 터치 피드백 */
+    .sum-card:active { background: var(--card-hover); }
+    .agent-card:active { background: var(--card-hover); }
+    .btn:active { opacity: 0.8; }
+    .export-btn:active { border-color: var(--green); background: rgba(46,125,50,0.08); }
+    /* 스크롤바 숨김 */
+    .crud-scroll::-webkit-scrollbar { height: 4px; }
+    .crud-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+    .table-scroll::-webkit-scrollbar { height: 4px; }
+    .table-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+  }
+
+  /* 가로 모드 모바일 */
+  @media (max-height: 500px) and (orientation: landscape) {
+    .header { padding: 8px 16px; }
+    .container { padding: 8px 16px 24px; }
+    .chart-wrap { height: 180px; }
+    .chart-wrap-sm { height: 150px; }
+    .modal-box { max-height: 95vh; }
+  }
+
+  /* 안전 영역 (노치 등) */
+  @supports (padding: env(safe-area-inset-bottom)) {
+    .container { padding-bottom: calc(40px + env(safe-area-inset-bottom)); }
+    .modal-box { padding-bottom: env(safe-area-inset-bottom); }
   }
 </style>
 </head>
@@ -1054,7 +1189,7 @@
   <div class="chart-grid">
     <div class="chart-card">
       <h3>채무 현황</h3>
-      <table class="data-table" id="debtTable">
+      <div class="table-scroll"><table class="data-table" id="debtTable">
         <thead>
           <tr>
             <th>채무명</th>
@@ -1066,7 +1201,7 @@
           </tr>
         </thead>
         <tbody></tbody>
-      </table>
+      </table></div>
       <div style="margin-top:20px">
         <div class="chart-wrap-sm">
           <canvas id="debtChart"></canvas>
@@ -1093,7 +1228,7 @@
   <div class="chart-grid">
     <div class="chart-card full-card">
       <h3>CNC 수주 및 마진 현황</h3>
-      <table class="data-table" id="orderTable">
+      <div class="table-scroll"><table class="data-table" id="orderTable">
         <thead>
           <tr>
             <th>수주번호</th>
@@ -1106,7 +1241,7 @@
           </tr>
         </thead>
         <tbody></tbody>
-      </table>
+      </table></div>
     </div>
   </div>
 
