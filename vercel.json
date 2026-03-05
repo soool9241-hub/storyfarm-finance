@@ -1,19 +1,8 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/**/*.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "dashboard/index.html",
-      "use": "@vercel/static"
-    }
-  ],
+  "buildCommand": "",
+  "outputDirectory": "public",
   "routes": [
-    { "src": "/api/data", "dest": "/api/data.py" },
-    { "src": "/api/agents", "dest": "/api/agents.py" },
-    { "src": "/api/agent/run/(.*)", "dest": "/api/agents.py" },
-    { "src": "/(.*)", "dest": "/dashboard/index.html" }
+    { "src": "/(.*)", "dest": "/$1" }
   ]
 }

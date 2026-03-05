@@ -1,0 +1,559 @@
+{
+  "month": "2026-03",
+  "summary": {
+    "total_revenue": 4650000,
+    "total_cogs": 1430000,
+    "gross_profit": 3220000,
+    "total_sga": 6745000,
+    "operating_income": -3525000,
+    "interest_expense": 136250,
+    "net_income": -3661250,
+    "total_assets": 29420000,
+    "total_debt": 18000000,
+    "debt_ratio": 61.2
+  },
+  "revenue_breakdown": {
+    "용역매출": 3850000,
+    "숙박매출": 800000
+  },
+  "expense_breakdown": {
+    "임차료": 800000,
+    "원재료비": 1430000,
+    "기타판관비": 3150000,
+    "인건비": 2000000,
+    "감가상각비": 795000
+  },
+  "assets": [
+    {
+      "name": "CNC 머신 1호",
+      "acquisition_cost": 30000000,
+      "book_value": 15150000,
+      "accumulated_dep": 14850000,
+      "monthly_dep": 450000,
+      "life_pct": 55.0,
+      "remaining_months": 27
+    },
+    {
+      "name": "레이저커터",
+      "acquisition_cost": 15000000,
+      "book_value": 9150000,
+      "accumulated_dep": 5850000,
+      "monthly_dep": 225000,
+      "life_pct": 43.3,
+      "remaining_months": 34
+    },
+    {
+      "name": "CNC 라우터",
+      "acquisition_cost": 8000000,
+      "book_value": 5120000,
+      "accumulated_dep": 2880000,
+      "monthly_dep": 120000,
+      "life_pct": 40.0,
+      "remaining_months": 36
+    }
+  ],
+  "debts": [
+    {
+      "name": "카드론",
+      "balance": 3000000,
+      "rate_pct": 19.5,
+      "monthly_payment": 250000,
+      "monthly_interest": 48750,
+      "original": 5000000,
+      "paid_pct": 40.0
+    },
+    {
+      "name": "OK캐피탈",
+      "balance": 5000000,
+      "rate_pct": 12.0,
+      "monthly_payment": 850000,
+      "monthly_interest": 50000,
+      "original": 10000000,
+      "paid_pct": 50.0
+    },
+    {
+      "name": "국민은행 일시상환",
+      "balance": 10000000,
+      "rate_pct": 4.5,
+      "monthly_payment": 37500,
+      "monthly_interest": 37500,
+      "original": 10000000,
+      "paid_pct": 0.0
+    }
+  ],
+  "cashflow_forecast": [
+    {
+      "date": "2026-03-06",
+      "weekday": "금",
+      "income": 0,
+      "expense": 0,
+      "balance": 8500000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-07",
+      "weekday": "토",
+      "income": 0,
+      "expense": 0,
+      "balance": 8500000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-08",
+      "weekday": "일",
+      "income": 0,
+      "expense": 0,
+      "balance": 8500000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-09",
+      "weekday": "월",
+      "income": 0,
+      "expense": 0,
+      "balance": 8500000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-10",
+      "weekday": "화",
+      "income": 0,
+      "expense": 300000,
+      "balance": 8200000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": [
+        {
+          "name": "공과금",
+          "amount": 300000
+        }
+      ]
+    },
+    {
+      "date": "2026-03-11",
+      "weekday": "수",
+      "income": 0,
+      "expense": 0,
+      "balance": 8200000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-12",
+      "weekday": "목",
+      "income": 0,
+      "expense": 0,
+      "balance": 8200000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-13",
+      "weekday": "금",
+      "income": 0,
+      "expense": 0,
+      "balance": 8200000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-14",
+      "weekday": "토",
+      "income": 0,
+      "expense": 0,
+      "balance": 8200000,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-15",
+      "weekday": "일",
+      "income": 0,
+      "expense": 537500,
+      "balance": 7662500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": [
+        {
+          "name": "국민은행 일시상환 이자",
+          "amount": 37500
+        },
+        {
+          "name": "국민카드 결제",
+          "amount": 500000
+        }
+      ]
+    },
+    {
+      "date": "2026-03-16",
+      "weekday": "월",
+      "income": 0,
+      "expense": 0,
+      "balance": 7662500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-17",
+      "weekday": "화",
+      "income": 0,
+      "expense": 500000,
+      "balance": 7162500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": [
+        {
+          "name": "신한카드 결제",
+          "amount": 500000
+        }
+      ]
+    },
+    {
+      "date": "2026-03-18",
+      "weekday": "수",
+      "income": 0,
+      "expense": 0,
+      "balance": 7162500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-19",
+      "weekday": "목",
+      "income": 0,
+      "expense": 0,
+      "balance": 7162500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-20",
+      "weekday": "금",
+      "income": 0,
+      "expense": 850000,
+      "balance": 6312500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": [
+        {
+          "name": "OK캐피탈",
+          "amount": 850000
+        }
+      ]
+    },
+    {
+      "date": "2026-03-21",
+      "weekday": "토",
+      "income": 0,
+      "expense": 0,
+      "balance": 6312500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-22",
+      "weekday": "일",
+      "income": 0,
+      "expense": 0,
+      "balance": 6312500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-23",
+      "weekday": "월",
+      "income": 0,
+      "expense": 0,
+      "balance": 6312500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-24",
+      "weekday": "화",
+      "income": 0,
+      "expense": 0,
+      "balance": 6312500,
+      "status": "OK",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-25",
+      "weekday": "수",
+      "income": 0,
+      "expense": 2250000,
+      "balance": 4062500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": [
+        {
+          "name": "카드론",
+          "amount": 250000
+        },
+        {
+          "name": "급여",
+          "amount": 2000000
+        }
+      ]
+    },
+    {
+      "date": "2026-03-26",
+      "weekday": "목",
+      "income": 0,
+      "expense": 0,
+      "balance": 4062500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-27",
+      "weekday": "금",
+      "income": 0,
+      "expense": 0,
+      "balance": 4062500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-28",
+      "weekday": "토",
+      "income": 0,
+      "expense": 0,
+      "balance": 4062500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-29",
+      "weekday": "일",
+      "income": 0,
+      "expense": 0,
+      "balance": 4062500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-30",
+      "weekday": "월",
+      "income": 0,
+      "expense": 0,
+      "balance": 4062500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-03-31",
+      "weekday": "화",
+      "income": 0,
+      "expense": 0,
+      "balance": 4062500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-04-01",
+      "weekday": "수",
+      "income": 0,
+      "expense": 800000,
+      "balance": 3262500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": [
+        {
+          "name": "월세",
+          "amount": 800000
+        }
+      ]
+    },
+    {
+      "date": "2026-04-02",
+      "weekday": "목",
+      "income": 0,
+      "expense": 0,
+      "balance": 3262500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-04-03",
+      "weekday": "금",
+      "income": 0,
+      "expense": 0,
+      "balance": 3262500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    },
+    {
+      "date": "2026-04-04",
+      "weekday": "토",
+      "income": 0,
+      "expense": 0,
+      "balance": 3262500,
+      "status": "WARNING",
+      "income_details": [],
+      "expense_details": []
+    }
+  ],
+  "danger_zones": [],
+  "orders": [
+    {
+      "order_id": "CNC-2026-031",
+      "date": "2026-03-03",
+      "description": "AL6061 정밀 가공 부품 50EA",
+      "revenue": 2500000,
+      "cost_breakdown": {
+        "material_cost": 562500,
+        "machine_cost": 240000,
+        "labor_cost": 300000,
+        "outsource_cost": 0,
+        "indirect_cost": 200000
+      },
+      "total_cost": 1302500,
+      "profit": 1197500,
+      "margin_rate": 0.479,
+      "machine_type": "cnc",
+      "material_type": "AL6061",
+      "business_type": "workshop"
+    },
+    {
+      "order_id": "CNC-2026-032",
+      "date": "2026-03-07",
+      "description": "SUS304 브라켓 제작 30EA",
+      "revenue": 1800000,
+      "cost_breakdown": {
+        "material_cost": 520000,
+        "machine_cost": 180000,
+        "labor_cost": 210000,
+        "outsource_cost": 100000,
+        "indirect_cost": 144000
+      },
+      "total_cost": 1154000,
+      "profit": 646000,
+      "margin_rate": 0.3589,
+      "machine_type": "cnc",
+      "material_type": "SUS304",
+      "business_type": "workshop"
+    },
+    {
+      "order_id": "CNC-2026-033",
+      "date": "2026-03-12",
+      "description": "MDF 레이저커팅 간판 10EA",
+      "revenue": 500000,
+      "cost_breakdown": {
+        "material_cost": 75000,
+        "machine_cost": 32000,
+        "labor_cost": 45000,
+        "outsource_cost": 0,
+        "indirect_cost": 40000
+      },
+      "total_cost": 192000,
+      "profit": 308000,
+      "margin_rate": 0.616,
+      "machine_type": "laser",
+      "material_type": "MDF",
+      "business_type": "workshop"
+    },
+    {
+      "order_id": "CNC-2026-034",
+      "date": "2026-03-18",
+      "description": "AL6061 시제품 가공 5EA - 급행",
+      "revenue": 350000,
+      "cost_breakdown": {
+        "material_cost": 135000,
+        "machine_cost": 120000,
+        "labor_cost": 150000,
+        "outsource_cost": 50000,
+        "indirect_cost": 28000
+      },
+      "total_cost": 483000,
+      "profit": -133000,
+      "margin_rate": -0.38,
+      "machine_type": "cnc",
+      "material_type": "AL6061",
+      "business_type": "workshop"
+    },
+    {
+      "order_id": "CNC-2026-035",
+      "date": "2026-03-22",
+      "description": "SUS304 정밀부품 외주포함 100EA",
+      "revenue": 5000000,
+      "cost_breakdown": {
+        "material_cost": 1625000,
+        "machine_cost": 600000,
+        "labor_cost": 525000,
+        "outsource_cost": 300000,
+        "indirect_cost": 400000
+      },
+      "total_cost": 3450000,
+      "profit": 1550000,
+      "margin_rate": 0.31,
+      "machine_type": "cnc",
+      "material_type": "SUS304",
+      "business_type": "workshop"
+    }
+  ],
+  "margin_summary": {},
+  "pension": {
+    "revenue_by_weekday": {
+      "토": 650000,
+      "일": 150000
+    },
+    "revenue_by_season": {
+      "봄": 800000
+    },
+    "total_revenue": 800000,
+    "total_guests": 5,
+    "avg_revenue_per_guest": 160000,
+    "total_days": 31,
+    "booked_days": 5,
+    "unbooked_days": 26,
+    "vacancy_rate_pct": 83.9
+  },
+  "repayment_sim": [
+    {
+      "name": "최소 납부만 유지",
+      "total_months": 14,
+      "total_interest": 806327,
+      "payoff_date": "2027-05"
+    },
+    {
+      "name": "월 50만원 추가 상환 (최고금리 우선)",
+      "total_months": 7,
+      "total_interest": 563814,
+      "payoff_date": "2026-10"
+    },
+    {
+      "name": "월 100만원 추가 상환 (최고금리 우선)",
+      "total_months": 7,
+      "total_interest": 495747,
+      "payoff_date": "2026-10"
+    }
+  ]
+}
